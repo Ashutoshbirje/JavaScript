@@ -1,0 +1,288 @@
+:////////////////:JavaScript:////////////////:
+
+About:
+
+  # used to provide functionallity for webpage
+  # scripting language / light-weight programming language
+  # clinet-slide scripting language 
+  # interpreted
+  # Slow
+  # Dynamiclly typed language
+
+History:
+
+  mocka > live script > java script
+
+  ECMAscript > ES13 > ES5 > ES6 
+
+Need:
+
+  # used to make game , web app , mobile app , andrioid app , CLI tools
+
+setup
+
+  # browser > Setting > Search > JS > Off
+
+complition:
+
+  # As to run any programming language we need compiler also to run any JS code we need < JS engine > 
+  # < JS engine > converts source code into machine code to render data on browser
+  # Ex. firefox ( spaider monkey ) chrome ( v8 ) those are example of < JS engine >
+  # (c++ + js) --> Node 
+  # How to run 
+
+ 1) On Web console 
+--> (right click > insepect > console)
+--> Clear console : Ctrl + L
+--> Run : Ctrl + Enter 
+--> Clear Data Memory : Ctrl + R / Ctrl + Shfit + R 
+ 
+ 2) Vs-code & node js 
+--> (right click > run code)
+--> (cmd : node file_name.js)
+
+Variable:
+
+ # Variable Named memory loaction
+ # Syntex
+--> (let/var/const) Variable_NAME = VALUE ;
+ # Rule
+--> Cannot be a reserved keyword
+--> Meaningful
+--> Cannot start with a number,sign
+--> Cannot contain space / '-'
+--> cammal_Case_Language
+ # properties
+       Scope Redeclare Reassign Hoisted Binds this
+var     N      Y          Y       Y        Y           
+let     Y      N          Y       N        N           
+const   Y      N          N       N        N
+
+scope  function global block
+var       Y       Y      N
+let       Y       Y      Y
+const     Y       Y      Y
+
+datatype:
+
+--> Premitive 
+( string / Number / Boolean / undefined / Null )
+
+--> Non - Premitive 
+(                                              )
+
+# dynamic typing
+
+--> we can assign different kind of datatype to the varible ( let / var ) at different instance
+
+# Reference Types
+
+ 1) Objects
+    (multiple var linked to single entitiy) 
+--> Syntex
+    (let/var/const) obj_name = {
+      // obj property
+         property:value;
+      // obj method
+         obj_method:function(){
+          // method body
+         },
+    }
+--> How to access Objects
+    i) Dot Notation  (obj.property)
+    ii) Bracket Notation (obj[property])
+
+ 2) Arrays
+    (Collection of item that may be different or same)
+--> Syntex
+    (let/var/const) array_name = { , ,...}; 
+--> How to access array element
+    i) Array_name[index]
+    ii) Array_name[index]=new_value
+
+ 3) Functions 
+    (Block of statement that execute when function is called)
+--> Syntex
+ 
+--> Type of function
+    1) Normal Function 
+    2) Arrow function
+    3) Expression function
+    4) Void function
+
+--> How to call function
+    function_name();
+
+Operator
+
+1) Unary
+--> pre increment(++a)
+--> pre decrement(--a)
+--> post increment(a++)
+--> post decrement(a--)
+--> Assignment operator(=)
+
+2) Binary
+  1) Arithmetic
+--> ( - , + , * , / , % ,**)
+
+  2) Comparison
+--> ( > , < , >= , <= , == , != , === , !==)
+--> ( == ) check for only value
+--> ( === ) check for both value and data type
+  5) Logical  
+--> ( applied on both booleans and both Non-booleans)
+    ( AND (&&) / OR(||) / NOT(!) )
+--> ( applied on booleans and Non-booleans and vice-versa)
+    ( consept of False and True )
+    Truthy : Any thing that is not fallcy
+    Fallcy : undefined , null , 0 , false , NaN
+
+
+  6) Bitwise
+--> ( & , | , ! , >> , << , ^)
+   A  B  &  |     
+   0  0  0  0  
+   0  1  0  1 
+   1  0  0  1
+   1  1  1  1
+
+3) Ternary 
+--> ( (cnd) ? true : false );
+
+Operatior Precedence
+--> ( () , * , / , + , -)
+
+Control Statement
+
+--> if
+   if(cnd){
+
+   }
+
+--> if - else
+   if(cnd){
+
+   } else {
+
+   }
+
+--> if - else if - else
+   if(cnd){
+
+   } else if (cnd) {
+
+   } else {
+
+   }
+
+--> switch case
+   switch(term){
+    case :
+        break;
+    case :
+        break;
+    case :
+        break;
+        .
+        .
+        .
+    default:
+        break;
+   } 
+
+Loops:
+
+--> For Loop
+   for( initilization ; condition ; Updation ){
+
+   }
+     
+--> while Loop
+   while( cnd ){
+
+   }
+
+--> Do-while Loop
+   do {
+
+   } while ( cnd );
+
+--> Infinte Loop
+
+--> For-in Loop ( Apply on object )
+   for ( let __ in ___ ){
+      console.log(__, ___[__]);
+   }
+
+--> For-each Loop (Array.forEach(fnx_call()))
+   fnx fnx_name(value,index,array){
+   }
+     
+--> For-of Loop ( Apply on itrabale like array , maps )
+   for ( let __ of object.entries()){
+      console.log(___);
+   }
+
+Break and Continue:
+
+
+ 
+Function:
+--> block of code that perform specific task when it is calls
+--> Dynamic in Nature
+
+# use:
+--> reusability
+
+# Syntex
+// Function Declaration (hoisting)
+--> function name_fnx(para_){
+     // function body
+    }
+// call
+--> name_fnx();
+
+// Named Function Assignment (No hoisting)
+--> (let/var) var_name = function name_fnx(para_){
+     // function body
+    }
+// call
+--> var_name();
+
+// Expression Function Assignment (No hoisting)
+// Anonymous Function Assignment (No hoisting)
+--> (let/var) var_name = function (para_){
+     // function body
+    }
+// call
+--> var_name();
+
+// Arrow Function Assignment (No hoisting)
+--> (let/var) var_name = (para_)=>{
+     // function body
+    }
+// call
+--> var_name();
+
+# about parameter passing
+--> If we pass exact para the result is ok
+--> If we pass less para the result is NaN
+--> If we pass zero para the result is NaN
+--> If we pass more para the result is ok
+
+# argument (Object)
+
+# rest operator (Array)
+ // declare at the end
+
+# default parameter
+// declare at the end
+
+
+Hoisting:
+
+
+
+
+String:

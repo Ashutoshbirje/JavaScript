@@ -1,0 +1,37 @@
+# Control Statement
+
+--> if
+   if(cnd){
+
+   }
+
+--> if - else
+   if(cnd){
+
+   } else {
+
+   }
+
+--> if - else if - else
+   if(cnd){
+
+   } else if (cnd) {
+
+   } else {
+
+   }
+
+--> switch case
+   switch(term){
+    case :
+        break;
+    case :
+        break;
+    case :
+        break;
+        .
+        .
+        .
+    default:
+        break;
+   } 

@@ -1,0 +1,29 @@
+# Variable Named memory loaction
+# Syntex
+ (let/var/const) Variable_NAME = VALUE ;
+
+# Rule
+--> Cannot be a reserved keyword
+--> Meaningful
+--> Cannot start with a number,sign
+--> Cannot contain space / '-'
+--> cammal_Case_Language
+
+       Scope Redeclare Reassign Hoisted Binds this
+var     N      Y          Y       Y        Y           
+let     Y      N          Y       N        N           
+const   Y      N          N       N        N
+
+       function global block
+var       Y       Y      N
+let       Y       Y      Y
+const     Y       Y      Y
+
+# Scope
+
+1) global scope 
+--> any where we can use
+2) Function scope
+--> within a function
+3) Block scope
+--> within a block and below the block

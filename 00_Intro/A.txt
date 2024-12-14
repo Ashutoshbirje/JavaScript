@@ -1,0 +1,319 @@
+Phase:
+   F) DOM
+   I) other
+
+(Talegram)
+L 43
+
+ // DONE
+ 
+L 44 
+
+# Object oriented programming language
+
+# Object
+
+# Object Creation
+ 1) factory function
+ 2) Constructor Function
+
+# Dynamic Nature of Object
+addtion of property and deletion of property is possible
+
+# type in JS
+ 1) Primitive/ value type (Number / string / Boolean / undefined / null )
+ 2) Reference type (obj / array / function)
+
+# Primitive are copied by their value
+# Reference are copied by their address
+
+# Object Cloning
+ 1) iteration
+ 2) assign Object.assign({} src);
+ 3) spread
+
+# Grabage Collector (auto)
+
+L 45
+# inbulit object
+ 1) Math
+ 2) string
+ 3) Date
+
+# Escape sequence
+
+# Array
+Collection of different type of data
+--> About array method
+
+L 46 
+
+
+# Getter-Setter
+
+ // Getter -> access properties
+ // Setter -> change or mutate properties
+
+0:59:07
+# Error Handling
+ // Try and catch
+ // based on condition of error
+ throw(){
+
+ }
+ try(){
+   // code 
+ }
+ catch(e){
+   // code
+ }
+
+ finally{
+
+ }
+
+# Scope
+
+L 47
+# Window 
+--> global object
+--> create by browser 
+--> represent a browser Window
+--> it contains DOM,BOM,JScode
+--> Used to control browser Window
+
+# DOM
+--> Document object model
+--> document , document.body ....
+--> Tree like structure
+--> char > tag > token > nodes > DOM
+
+# BOM
+--> browser object model
+--> rather than content of web page
+
+# Object: Document
+# method
+  1) getElementbyID("ID_NAME");
+--> returns single element
+
+  2) getElementbyClassName("CLASS_NAME");
+--> returns multiple element
+--> Array like entitiy
+--> HTML Collection
+
+  3) getElementsByTagName("TAG_NAME");
+--> returns multiple element
+--> Array like entitiy
+--> HTML Collection
+
+# $0 hover on tag 
+
+  4) querySelector("#demo / .demo / Tagname");
+--> returns single element
+
+  5) querySelectorAll("#demo / .demo / Tagname");
+--> returns multiple element
+
+// HTML Mainipulation
+
+let item = document.method();
+(Update existing contact)
+# object: selected item
+# method:
+   1) .innerHTML;
+--> get / set HTML element 
+--> inner tag consideras tag only 
+--> gets an element / all desendents
+--> item.innerHTML
+--> sets an element's HTML content
+--> item.innerHTML="value"
+
+   2) .outerHTML;
+--> 
+-->
+--> 
+
+   3) .textContent;
+--> get / set HTML content  
+--> inner tag consideras text only 
+
+   4) .innerText;
+--> get / set HTML content    
+--> follow properties (display : hidden)
+
+Adding New Element / content
+# object: selected item
+# method:
+   1) document.createElement('element');
+--> 
+
+   2) parent.appendChild(childname);
+--> append add at the end
+
+   3) parent.insertAdjcentElement((position), "contain");
+--> Called with two argument
+--> 1st argument : location / position (where)
+--> (beforebegin / afterbegin / beforeend / afterend)
+--> 2nd argument : HTML TEXT / contain (what)
+
+Add text into that element
+   A) ().textContent=' text ';
+--> 
+   B) document.createTextNode('text');
+--> 
+
+Remove
+   1) parent.removechild("childname");
+--> Opposite of appendChild
+--> must know who is child and who is parent
+--> we must know about parent
+
+   2) parent=childElement.parent
+--> parent.removechild(childname);
+
+// CSS Mainipulation
+.style.property=value               // single values
+.style.cssText=value                // multiple values
+.setattribute("attribute","value");
+.className                          // returns string
+.classList                          // returns array
+
+L 48
+# browser Events
+
+# Event
+--> Event
+--> response to Event
+--> data store in Event
+--> how to stop
+--> lifecyle of Event
+
+  1) monitorEvents(document)
+--> to showcase event on console
+
+form > submit > action
+
+  2) EventTarget
+--> interface
+--> object implimented by the object that can revice events and may have listener event
+--> Top level interface
+
+  a) addEventListner()
+--> listen / response / hook
+--> Syntex
+    <event_target_name>.addEventListner(<event_type_name>,<function_call>,usecapture ( optional))
+--> event_target_name
+    Ex. component
+--> event_type_name
+    Ex. click / double click / scroll
+--> function_call
+    what to do on event happing
+
+  b) removeEventListner()
+--> Syntex
+    <event_target_name>.removeEventListner()(<event_type_name>,<function_call>)
+--> function passed in rEL and aEL must be same object
+--> same event EventTarget
+--> same event event_type
+--> same event function
+
+inspect > event listiner
+
+  c) dispatchEvent()
+--> (HW) 
+
+// Inheritance
+eventTarget --> Node --> element 
+ 
+# Phases of event
+--> Capturing phase (move from top to target)   --> usecapture set to true
+--> At target phase (at target)                 --> 
+--> Bubbling phase  (move from target to top)   --> (default)
+
+# when an event occurs then addEventListner gets event object it contains lot of 
+  info about event 
+
+# to prevent default event >>  eventobj.preventDefault
+Syntex:
+(select_element).addEventListener(
+   ' ',
+   function(event){
+   event.preventDefault();
+   }; 
+);
+
+# avoid many event to optimise code
+
+# target property
+--> event_obj.target.textContent
+--> event_obj.target.nodename
+
+# Best practice
+
+  <head>
+     <script>
+     document.addEventListener('DOMcontentLoaded', fnx(){});
+     </script>
+  </head>
+
+L 49
+
+# Performance
+--> measure speed of code
+--> efficent and optimize code
+--> event loop
+
+--> Performance.now();
+--> Reflow  (mathematical calulation)
+--> Repaint (to show on display pixel by pixel)
+--> fregment concept
+
+# call Stack
+--> single thread language
+--> one command at a time
+--> top se bottom execution
+--> Run to complition
+--> JS does not execution multiple line at a time
+
+# event loop
+--> synchrozation ( occuraing in the same time )
+--> not a synchrozation ( event )
+>> call stack >> browser >> Event Queue
+
+--> Philp Robert (Youtube)
+
+L 50
+--> synchrozation ( occuraing in the same time )
+--> Asynchronzation ( depend on event )
+--> syn code 
+--> asyn code (used to handle concurrancy)
+--> Feature of asyn code
+   1) clean and concise
+   2) Better error handle
+
+# API ( Application Programming Interface)
+--> Connection b/w frontend and backend
+--> Establish communication between frontend and backend
+--> ( post / get / put / delete)
+
+// Pending
+# Promise
+--> To used parlle execution of things in a background
+
+L 51 
+--> Counter Project
+
+//Pending
+
+L 52
+
+L 53
+
+L 54
+
+L 55
+
+L 56
+
+L 57

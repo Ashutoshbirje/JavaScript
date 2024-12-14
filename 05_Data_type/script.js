@@ -1,0 +1,12 @@
+var a=12;
+console.log(typeof(a));
+var a=12333333333333333333333;
+console.log(typeof(a));
+var b="12";
+console.log(typeof(b));
+var c=true;
+console.log(typeof(c));
+var d=null;
+console.log(typeof(d));
+var e;
+console.log(typeof(e));

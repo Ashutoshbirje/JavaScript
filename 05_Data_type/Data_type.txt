@@ -1,0 +1,45 @@
+# datatype 
+--> Premitive 
+( string / Number / Boolean / undefined / Null )
+--> Non - Premitive 
+(                                              )
+
+# dynamic typing
+--> we can assign different kind of datatype to the varible ( let / var ) at different instance
+
+# Reference Types
+ 1) Objects
+    (multiple var linked to single entitiy) 
+--> Syntex
+    (let/var/const) obj_name = {
+      // obj property
+         property:value;
+      // obj method
+         obj_method:function(){
+          // method body
+         },
+    }
+--> How to access Objects
+    i) Dot Notation  (obj.property)
+    ii) Bracket Notation (obj[property])
+
+ 2) Arrays
+    (Collection of item that may be different or same)
+--> Syntex
+    (let/var/const) array_name = { , ,...}; 
+--> How to access array element
+    i) Array_name[index]
+    ii) Array_name[index]=new_value
+
+ 3) Functions 
+    (Block of statement that execute when function is called)
+--> Syntex
+ 
+--> Type of function
+    1) Normal Function 
+    2) Arrow function
+    3) Expression function
+    4) Void function
+
+--> How to call function
+    function_name();

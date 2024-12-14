@@ -1,0 +1,34 @@
+# Loops:
+
+--> For Loop
+   for( initilization ; condition ; Updation ){
+
+   }
+     
+--> while Loop
+   while( cnd ){
+
+   }
+
+--> Do-while Loop
+   do {
+
+   } while ( cnd );
+
+--> Infinte Loop
+
+--> For-in Loop ( Apply on object )
+   for ( let __ in ___ ){
+      console.log(__, ___[__]);
+   }
+
+--> For-each Loop (Array.forEach(fnx_call()))
+   fnx fnx_name(value,index,array){
+   }
+     
+--> For-of Loop ( Apply on itrabale like array , maps )
+   for ( let __ of object.entries()){
+      console.log(___);
+   }
+
+# Break and Continue

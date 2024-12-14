@@ -1,0 +1,39 @@
+# Operator
+
+1) Unary
+--> pre increment(++a)
+--> pre decrement(--a)
+--> post increment(a++)
+--> post decrement(a--)
+--> Assignment operator(=)
+
+2) Binary
+  1) Arithmetic
+--> ( - , + , * , / , % ,**)
+
+  2) Comparison
+--> ( > , < , >= , <= , == , != , === , !==)
+--> ( == ) check for only value
+--> ( === ) check for both value and data type
+  5) Logical  
+--> ( applied on both booleans and both Non-booleans)
+    ( AND (&&) / OR(||) / NOT(!) )
+--> ( applied on booleans and Non-booleans and vice-versa)
+    ( consept of False and True )
+    Truthy : Any thing that is not fallcy
+    Fallcy : undefined , null , 0 , false , NaN
+
+
+  6) Bitwise
+--> ( & , | , ! , >> , << , ^)
+   A  B  &  |     
+   0  0  0  0  
+   0  1  0  1 
+   1  0  0  1
+   1  1  1  1
+
+3) Ternary 
+--> ( (cnd) ? true : false );
+
+# Operatior Precedence
+--> ( () , * , / , + , -)
