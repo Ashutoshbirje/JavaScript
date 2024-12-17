@@ -18,7 +18,9 @@ console.log(arr3);
 let arr4= new Array(1,"ashu",true);
 console.log(arr4);
 
-// acess array element
+console.log(typeof(arr1));
+
+// // acess array element
 let arr5= new Array(1,2,3,4,5);
 console.log(arr5[0]);
 console.log(arr5[1]);
@@ -29,19 +31,19 @@ console.log(arr5.at(4));
 let arr6=[1,2,3,4,5];
 console.log(arr6);
 
-// convert array to string
+// // convert array to string
 console.log(arr6.toString());
 console.log(arr6.join("*"));
 
-console.log(typeof(arr1));
-Array.isArray(arr1);
-(arr1 instanceof Array);
+// ??
+// Array.isArray(arr1);
+// (arr1 instanceof Array);
 
-// length of array 
-let len=arr1.length();
+// // length of array 
+let len=arr1.length;
 console.log(len);
 
-// ADD and REMOVE
+// // ADD and REMOVE
 // push back
 arr6.push(6);      // returns length
 console.log(arr6);
@@ -56,20 +58,25 @@ arr6.unshift(1);   // returns length
 console.log(arr6);
 
 delete arr6[0];
+console.log(arr6);
 
 // To clear array
-// arr6=[];
-// arr6.length=0; // best
-// arr6.splice(0,arr6.length);
+arr6=[];
+arr6.length=0; // best
+// To remove element arr_name.splice(start_index,no_of_position_to_delete)
+arr6.splice(0,arr6.length);
+console.log(arr6);
 
-// merge array
+// // merge array
 let arr7=[1,2,3,4];
 let arr8=[5,6,7,8];
-
 console.log(arr7.concat(arr8));
 
-let combine=[...arr7,...arr8];
+let combine=[...arr7,...arr8,"add more thing"];
 console.log(combine);
 
-// copy array
-// flating of array
+// // copy array
+let cpy_arr=[...combine];
+console.log(cpy_arr);
+
+// // flating of array

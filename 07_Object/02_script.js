@@ -27,9 +27,3 @@ date.getDate();
 date.setMonth(2);
 console.log(date);
 
-// String ( obj / primitive )
-// // string type
-// let lastname = 'ash';
-// // object type
-// let firstName = new String('code');
-// // firstName.

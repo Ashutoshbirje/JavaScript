@@ -4,7 +4,8 @@ class Human {
     // properties
     age = 13; // public
     #wt = 80; // private
-    ht=100;
+    ht=100;   // public
+
     // behaviour
     walking(){
         console.log("I am walking ",this.#wt);
@@ -14,6 +15,7 @@ class Human {
         console.log("I am running");
     }
 
+    // to mark as private use #
     #talking(){
         console.log("I am talking");
     }
@@ -45,5 +47,6 @@ obj.walking();
 obj.running();
 
 console.log(obj.getter);
+
 // how to set ??
 

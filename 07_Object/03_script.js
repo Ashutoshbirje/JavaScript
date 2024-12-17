@@ -20,7 +20,7 @@ console.log(obj_copy);
 
 // clone
 
-// m1
+// m1 : using sprade operator
 let obj_clone = {...obj};
 
 obj_clone.age=90;
@@ -28,7 +28,7 @@ obj_clone.age=90;
 console.log(obj);
 console.log(obj_clone);
 
-// m2
+// m2 : using assign method
 let obj_clone1 = Object.assign({},obj);
 
 obj_clone1.ht=90;
@@ -36,7 +36,7 @@ obj_clone1.ht=90;
 console.log(obj);
 console.log(obj_clone1);
 
-// m3
+// m3 : using loop over object
 let obj_clone2={};
 
 for(let key in obj){

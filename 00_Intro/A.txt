@@ -6,45 +6,14 @@ Phase:
 L 43
 
  // DONE
- 
-L 44 
 
-# Object oriented programming language
+L 44  
 
-# Object
-
-# Object Creation
- 1) factory function
- 2) Constructor Function
-
-# Dynamic Nature of Object
-addtion of property and deletion of property is possible
-
-# type in JS
- 1) Primitive/ value type (Number / string / Boolean / undefined / null )
- 2) Reference type (obj / array / function)
-
-# Primitive are copied by their value
-# Reference are copied by their address
-
-# Object Cloning
- 1) iteration
- 2) assign Object.assign({} src);
- 3) spread
-
-# Grabage Collector (auto)
+ // DONE
 
 L 45
-# inbulit object
- 1) Math
- 2) string
- 3) Date
 
-# Escape sequence
-
-# Array
-Collection of different type of data
---> About array method
+ // DONE
 
 L 46 
 

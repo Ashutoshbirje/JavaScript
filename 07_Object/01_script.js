@@ -4,6 +4,8 @@ let obj={
     // obj property
     // property:value;
     name:"ashu",
+    // "name":"ashu",
+    // "nick name":"ashu",
     collage : "544",
     age:12,
 
@@ -16,6 +18,8 @@ let obj={
         return this.name+" "+this.age;
     }
 }
+
+
 
 // create with NEW keyword
 let obj2=new Object();
@@ -45,7 +49,7 @@ delete obj.name;
 // data type
 console.log(typeof(obj));
 
-//////////////////// DISPLAY ////////////////////
+// //////////////////// DISPLAY ////////////////////
 // print
 console.log(obj);
 
@@ -72,7 +76,7 @@ console.log(arr);
 let string=JSON.stringify(obj);
 console.log(string);
 
-//////////////////// CALL ////////////////////
+// //////////////////// CALL ////////////////////
 // call obj method
 obj.greet();
 

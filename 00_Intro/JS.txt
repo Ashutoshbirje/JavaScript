@@ -11,9 +11,8 @@ About:
 
 History:
 
-  mocka > live script > java script
-
-  ECMAscript > ES13 > ES5 > ES6 
+  # JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.
+  # mocka > live script > jscript > ECMAscript > ES123 > ES5 > ES6 > Java Script
 
 Need:
 
@@ -22,6 +21,13 @@ Need:
 setup
 
   # browser > Setting > Search > JS > Off
+  # right click > insepect > source > snippets > new snippets
+
+Java Vs JavaScript
+
+   # Compiled language            # Interpreted language 
+   # Fast                         # Slow
+   # java, C, C++, Swift          # javascript, Python, Ruby
 
 complition:
 
@@ -41,11 +47,29 @@ complition:
 --> (right click > run code)
 --> (cmd : node file_name.js)
 
+implimention:
+
+  # code is inserted between <script> </script>
+  # implement in HTML doc in <head> / <body> / both
+  # implement in external file with (.js) extension
+
+OutPut:
+
+ # Writing into an HTML element, using innerHTML.
+ # Writing into the HTML output using document.write().
+ # Writing into an alert box, using window.alert().
+ # Writing into the browser console, using console.log().
+
+Comment:
+
+ # Single line // 
+ # Multi line /* */
+
 Variable:
 
  # Variable Named memory loaction
  # Syntex
---> (let/var/const) Variable_NAME = VALUE ;
+--> (let/var/const/auto) Variable_NAME = VALUE ;
  # Rule
 --> Cannot be a reserved keyword
 --> Meaningful
@@ -53,29 +77,37 @@ Variable:
 --> Cannot contain space / '-'
 --> cammal_Case_Language
  # properties
-       Scope Redeclare Reassign Hoisted Binds this
-var     N      Y          Y       Y        Y           
-let     Y      N          Y       N        N           
-const   Y      N          N       N        N
+          Scope Redeclare Reassign Hoisted Binds-this
+   var     N      Y          Y       Y        Y           
+   let     Y      N          Y       N        N           
+   const   Y      N          N       N        N
 
-scope  function global block
-var       Y       Y      N
-let       Y       Y      Y
-const     Y       Y      Y
+   scope  function global block
+   var       Y       Y      N
+   let       Y       Y      Y
+   const     Y       Y      Y
+
 
 datatype:
 
---> Premitive 
-( string / Number / Boolean / undefined / Null )
+ # typeof()
+ # instanceof()
+ # Primitive are copied by their value
+ # Reference are copied by their address
 
---> Non - Premitive 
-(                                              )
-
-# dynamic typing
-
+ # dynamic typing
 --> we can assign different kind of datatype to the varible ( let / var ) at different instance
 
-# Reference Types
+1) Premitive 
+--> ( string / Number / Boolean / Bigint / undefined / Null / Symbol / Object )
+--> Size of the data type is fixed
+--> Javascript numbers are always one type:
+    double (64-bit floating point).
+
+ # Reference Types
+
+1) Non - Premitive 
+--> ( object / array / string )
 
  1) Objects
     (multiple var linked to single entitiy) 
@@ -120,7 +152,6 @@ Operator
 --> pre decrement(--a)
 --> post increment(a++)
 --> post decrement(a--)
---> Assignment operator(=)
 
 2) Binary
   1) Arithmetic
@@ -130,16 +161,18 @@ Operator
 --> ( > , < , >= , <= , == , != , === , !==)
 --> ( == ) check for only value
 --> ( === ) check for both value and data type
-  5) Logical  
+--> When comparing a string with a number, JavaScript will convert the string to a number when doing the comparison.
+
+  3) Logical  
 --> ( applied on both booleans and both Non-booleans)
     ( AND (&&) / OR(||) / NOT(!) )
 --> ( applied on booleans and Non-booleans and vice-versa)
     ( consept of False and True )
     Truthy : Any thing that is not fallcy
-    Fallcy : undefined , null , 0 , false , NaN
+    Fallcy : undefined , null , 0 , -0 , false , NaN , " "
 
 
-  6) Bitwise
+  4) Bitwise
 --> ( & , | , ! , >> , << , ^)
    A  B  &  |     
    0  0  0  0  
@@ -147,13 +180,21 @@ Operator
    1  0  0  1
    1  1  1  1
 
+  5) Assignment operator
+--> (=,+=,-=,*=,^=,%=,**=,<<=,>>=,>>>=,&=,^=,|=,&&=,||=,??=)
+--> The ??= operator is used between two values. If the first value is undefined or null, the second value is assigned.
+--> The ?. operator returns if an object is undefined or null
+
+  6) String addtion
+--> (+)
+
 3) Ternary 
 --> ( (cnd) ? true : false );
 
 Operatior Precedence
 --> ( () , * , / , + , -)
 
-Control Statement
+Control / Conditional Statement
 
 --> if
    if(cnd){
@@ -211,6 +252,7 @@ Loops:
 --> Infinte Loop
 
 --> For-in Loop ( Apply on object )
+--> loops through the properties of an object
    for ( let __ in ___ ){
       console.log(__, ___[__]);
    }
@@ -219,51 +261,85 @@ Loops:
    fnx fnx_name(value,index,array){
    }
      
---> For-of Loop ( Apply on itrabale like array , maps )
+--> For-of Loop ( Apply on itrabale like array , maps , strings, maps , Nodelists )
+--> loops through the values of an iterable object
    for ( let __ of object.entries()){
       console.log(___);
    }
 
 Break and Continue:
 
+  # Break : Jumps out the loop
+  # Continue : Jumps over the one iteration in the loop
 
  
 Function:
+
 --> block of code that perform specific task when it is calls
 --> Dynamic in Nature
+--> Functions are objects (arguments.length)
 
 # use:
+
 --> reusability
 
 # Syntex
-// Function Declaration (hoisting)
---> function name_fnx(para_){
+
+1) Non-Return Type
+   # Function Declaration (hoisting)
+--> function name_fnx(para_1,para_2,...){
      // function body
     }
-// call
+   # call
 --> name_fnx();
+   # May or may not be end with the semicolon
 
-// Named Function Assignment (No hoisting)
---> (let/var) var_name = function name_fnx(para_){
+2) Return Type
+   a) normal function
+   # Named Function Assignment (No hoisting)
+--> (let/var) var_name = function name_fnx(para_1,para_2,...){
      // function body
-    }
-// call
---> var_name();
-
-// Expression Function Assignment (No hoisting)
-// Anonymous Function Assignment (No hoisting)
+     return <>;
+    }; 
+   # call
+--> var_name; (refers to function object)
+--> var_name(); (refers to function result)
+   # May or may not be end with the semicolon
+ 
+   b) exp function
+   # Expression Function Assignment (No hoisting)
+   # Anonymous (A function without name) Function Assignment (No hoisting)
 --> (let/var) var_name = function (para_){
      // function body
-    }
-// call
+      return <>;
+    };
+   # call
 --> var_name();
+   # May or may not be end with the semicolon
 
-// Arrow Function Assignment (No hoisting)
+   c) arrow function
+   # Arrow Function Assignment (No hoisting)
 --> (let/var) var_name = (para_)=>{
      // function body
-    }
-// call
+      return <>;
+    };
+   # call
 --> var_name();
+   # May or may not be end with the semicolon
+
+3) Built-in Declaration:
+   
+   # Syntex
+--> const var_name = new Function("function body","return <>");
+   # call
+--> var_name();
+
+4) Self-Invoking Function:
+
+   # anonymous self-invoking function 
+   # Function are invoked automatically without being call 
+   # Syntax:
+--> (function defination)();
 
 # about parameter passing
 --> If we pass exact para the result is ok
@@ -271,18 +347,67 @@ Function:
 --> If we pass zero para the result is NaN
 --> If we pass more para the result is ok
 
-# argument (Object)
-
-# rest operator (Array)
- // declare at the end
+# Function parameter : Those are names listed in the function defination
+--> JavaScript function definitions do not specify data types for parameters.
+--> JavaScript functions do not perform type checking on the passed arguments.
+--> JavaScript functions do not check the number of arguments received.
 
 # default parameter
-// declare at the end
+--> declare at the end
+
+# rest parameter (Array)
+--> declare at the end
+--> The rest parameter (...) allows a function to treat an indefinite number of arguments as an array
+
+# Function argument : Real value passed to the function
+
+More:
+1) https://www.w3schools.com/js/js_function_invocation.asp
+2) https://www.w3schools.com/js/js_function_call.asp
+3) https://www.w3schools.com/js/js_function_apply.asp
+4) https://www.w3schools.com/js/js_function_bind.asp
+5) https://www.w3schools.com/js/js_function_closures.asp
 
 
 Hoisting:
 
 
 
-
 String:
+
+
+
+Array:
+
+
+
+Object
+
+ # collection of key-value pair
+ # Comparing two JavaScript objects always return false.
+ # they are dynamic in nature as we can change the properties of obj on run time
+ # Object oriented programming language
+ # Every object has it's own Constructor (obj.Constructor)
+ # Function is an object
+
+Object Creation
+
+ 1) factory function
+ 2) Constructor Function
+
+ # Dynamic Nature of Object
+ # addtion of property and deletion of property is possible
+
+Object Cloning
+
+ 1) iteration
+ 2) assign Object.assign({} src);
+ 3) spread
+
+inbulit object
+
+ 1) Math
+ 2) string
+ 3) Date
+
+Grabage Collector (auto)

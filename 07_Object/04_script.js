@@ -1,37 +1,44 @@
-console.log("let's start");
+// console.log("let's start");
 
 // object create 
-let rectangle = {
-    // Property
-    length: 1,
-    breath: 3,
+// let rectangle = { 
+//     // Property
+//     length: 1,
+//     breath: 3,
 
-    // Method
-    draw: function(){
-        console.log('draw');
-    }
-}
+//     // Method
+//     draw: function(){
+//         console.log('draw');
+//     }
+// }
 
 // call property 1) rectangle.length 2) rectangle[length]
-// call method   1) rectangle.drow   2) rectangle.drow() 
+// call method   1) rectangle.drow --> (print entire function)  2) rectangle.drow() --> (print entire functionallity)
 
-// Factory function (cteate an object and returns value )
-function createRectangle(a,b){
-    return rectangle = {
-        // Property
-        length: a,
-        breath: b,
+// M1
+// // Factory function (cteate an object and returns value )
+// function createRectangle(a,b){
+//     return rectangle = {
+//         // Property
+//         length: a,
+//         breath: b,
     
-        // Method
-        draw: function(){
-            console.log('draw');
-        }
-    }
-}
+//         // Method
+//         draw: function(){
+//             console.log('draw');
+//         },
+//         draw1(){
+//             console.log('draw');
+//         }
+//     }
+// }
 
-let a=createRectangle(3,4);
-console.log(a);
+// // it gives object as return value
+// let a=createRectangle(3,4);
+// console.log(a);
+// console.log(typeof(a));
 
+// M2
 // Constructor function (Pascal Notation --> first later of every word is capital)
 // it is a fux which initilizes to property and methods
 // this : refers to current object
@@ -50,10 +57,11 @@ let Rectangle1= new Function(
     `
 )
 
+// # rect & Rectangle are similar
+
+// father
 let rect = new Rectangle1(2,4);
 console.log(rect);
-
-// (rect == Rectangle)
 
 // father
 function Rectangle(a,b){
@@ -65,12 +73,15 @@ function Rectangle(a,b){
 }
 
 // child
+// Object creation using constructor function
 let b=new Rectangle(4,5);
 console.log(b);
 
 // object's parent constructor
-console.log(Rectangle.constructor);
 console.log(b.constructor);
+// parent's parent constructor
+console.log(Rectangle.constructor);
+
 
 // add
 b.color="red";
@@ -83,3 +94,7 @@ for(let key in rect){
     console.log(key,rect[key]);
 }
 
+
+// shallow cpy 
+
+// Deep cpy

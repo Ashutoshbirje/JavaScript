@@ -32,5 +32,5 @@ sum2(1,2,3,4,5,6);
 // must be declare at the end
 function sum2(a,b,c=8){
     console.log(a+b+c);
- }
- sum2(1,2,3);
+}
+sum2(1,2,3);
