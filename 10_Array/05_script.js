@@ -3,7 +3,7 @@ let arr=[1,2,3,4,5];
 let len=arr.length;
 
 // for-each
-arr.forEach((value,index)=>{
+arr.forEach((value,index,arr)=>{
     console.log("Number: ",value," Index: ",index);
 })
 
@@ -26,3 +26,4 @@ for(let value of arr){
 // //     return sum;
 // // }
 // // console.log(getsum(arr));
+ 

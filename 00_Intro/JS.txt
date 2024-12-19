@@ -42,7 +42,7 @@ complition:
 --> Clear console : Ctrl + L
 --> Run : Ctrl + Enter 
 --> Clear Data Memory : Ctrl + R / Ctrl + Shfit + R 
- 
+
  2) Vs-code & node js 
 --> (right click > run code)
 --> (cmd : node file_name.js)
@@ -289,6 +289,7 @@ Function:
    # Function Declaration (hoisting)
 --> function name_fnx(para_1,para_2,...){
      // function body
+     // para behave as local Variable
     }
    # call
 --> name_fnx();
@@ -373,13 +374,6 @@ Hoisting:
 
 
 
-String:
-
-
-
-Array:
-
-
 
 Object
 
@@ -388,26 +382,402 @@ Object
  # they are dynamic in nature as we can change the properties of obj on run time
  # Object oriented programming language
  # Every object has it's own Constructor (obj.Constructor)
- # Function is an object
+ # Everything is an object exxept Primitive
+ # Dynamic Nature of Object
+ # addtion of property and deletion of property is possible
+ # Object are Mutable
 
 Object Creation
 
  1) factory function
- 2) Constructor Function
 
- # Dynamic Nature of Object
- # addtion of property and deletion of property is possible
+ 2) Create an Object Literal
+ 
+ (var/let/const) var_name={
+    // obj property
+    property:value,
+    key:value,
 
+    // obj method
+    method_name: function(){
+
+    },
+    method_name(){
+
+    },
+  }
+
+ 3) Using the new Keyword
+
+ (var/let/const) var_name= new Object();
+ (var/let/const) var_name= { };
+
+ 4) Using an Object Constructor
+
+--> to add new properties and method use prototype
+ function fnx_name(para1,para2...){
+    this.property=value;
+    this.method=function(){
+        return <>;
+    }
+ }
+ (var/let/const) var_name= new fnx_name();
+
+Call
+
+// call obj method
+ objectName.method_name()
+
+// call property
+ objectName.propertyName
+ objectName["propertyName"]
+ 
 Object Cloning
 
  1) iteration
  2) assign Object.assign({} src);
- 3) spread
+ 3) spread (...)
 
 inbulit object
 
  1) Math
  2) string
  3) Date
+
+More:
+1) https://www.w3schools.com/js/js_object_definition.asp
+2) https://www.w3schools.com/js/js_object_prototypes.asp
+3) https://www.w3schools.com/js/js_object_methods.asp
+4) https://www.w3schools.com/js/js_object_properties.asp
+5) https://www.w3schools.com/js/js_object_accessors.asp
+6) https://www.w3schools.com/js/js_object_protection.asp
+
+
+String:
+
+
+
+
+
+
+Array:
+
+
+
+
+
+
+Window 
+--> global object
+--> create by browser 
+--> represent a browser Window
+--> it contains DOM, BOM, JScore function
+--> Used to control browser Window
+--> window.open(), window.close()
+
+BOM
+--> browser object model
+--> rather than content of web page
+
+DOM
+--> Document object model (Conversion of JS code to object)
+--> document , document.body ....
+--> Tree like structure of object
+--> char > tag > token > nodes > DOM
+--> Standard for accessing documents
+
+Key benifit:
+--> JavaScript can change all the HTML elements in the page
+--> JavaScript can change all the HTML attributes in the page
+--> JavaScript can change all the CSS styles in the page
+--> JavaScript can remove existing HTML elements and attributes
+--> JavaScript can add new HTML elements and attributes
+--> JavaScript can react to all existing HTML events in the page
+--> JavaScript can create new HTML events in the page
+
+HTML DOM:
+--> all HTML element defined as Object
+--> DOM object represents web page
+
+Method:
+--> actions you can perform on HTML elements
+
+Properties:
+--> values that you can set or change 
+
+////////////////////////////////////////////////////////////
+
+# Object: Document
+
+# method: 
+
+  1) getElementbyID("ID_NAME");
+--> returns single element as object ow null
+--> method of document
+
+  2) getElementbyClassName("CLASS_NAME");
+--> returns multiple element
+--> Array like entitiy
+--> HTML Collection
+
+  3) getElementsByTagName("TAG_NAME");
+--> returns multiple element
+--> Array like entitiy
+--> HTML Collection
+
+  4) querySelector("#demo / .demo / Tagname");
+--> returns single element
+--> return first entry
+
+  5) querySelectorAll("#demo / .demo / Tagname");
+--> returns multiple element
+
+# hover on tag in document and enter $0 in console
+
+# select element in html document
+// document
+// document.firstElementChild
+// document.lastElementChild
+// document.firstchild
+// document.lastchild
+// document.getElementById("demo");        // RETURN single eleemnt
+// document.getElementsByClassName("btn"); // RETURN array
+// document.getElementsByTagName("li");    // RETURN array
+// document.querySelector("button");       // RETURN single eleemnt
+// document.querySelector(".btn");         // RETURN single eleemnt
+// document.querySelector("#demo");        // RETURN single eleemnt
+// document.querySelectorAll("button");    // RETURN array
+// document.querySelectorAll(".btn");      // RETURN array
+// document.querySelectorAll("#demo");     // RETURN array
+
+
+////////////////////////////////////////////////////////////
+
+# HTML Mainipulation
+
+(Update existing contact)
+
+# object: select item from selection method
+
+# method: 
+
+   1) .innerHTML;
+--> get / set HTML element 
+--> inner tag consideras tag only 
+--> gets an element / all desendents
+--> item.innerHTML
+--> sets an element's HTML content
+--> item.innerHTML="value"
+
+   2) .outerHTML;
+--> 
+-->
+--> 
+
+   3) .textContent;
+--> get / set HTML content  
+--> inner tag consideras text only 
+
+   4) .innerText;
+--> get / set HTML content    
+--> follow properties (display : hidden)
+
+   5) .classlist;
+--> .classlist.add("classname");
+--> .classlist.remove("classname");
+--> .classlist.toggle("classname");
+
+   6) .attribute
+-->  
+
+   7) .getattribute("attribute");
+--> 
+
+   8) .setattribute("attribute","contain");
+--> 
+
+
+////////////////////////////////////////////////////////////
+
+Adding New Element / content
+
+# object: select item from selection method / document 
+
+# method: 
+
+   1) document.createElement('element');
+--> 
+
+   2) parent.appendChild(childname);
+--> append add at the end
+
+   3) parent.insertAdjcentElement((position), "contain");
+--> Called with two argument
+--> 1st argument : location / position (where)
+--> (beforebegin / afterbegin / beforeend / afterend)
+--> 2nd argument : HTML TEXT / contain (what)
+
+////////////////////////////////////////////////////////////
+
+Add text into that element
+
+# object: select item from selection method / document 
+
+# method: 
+
+   A) ().textContent=' text ';
+-->  
+
+   B) document.createTextNode('text');
+--> 
+
+   C) document.replaceChild(new,old);
+--> 
+
+   D) document.write(text);
+--> 
+
+////////////////////////////////////////////////////////////
+
+Remove Element / content
+ 
+# object: select item from selection method / document 
+
+# method: 
+
+   1) parent.removechild("childname");
+--> Opposite of appendChild
+--> must know who is child and who is parent
+--> we must know about parent
+
+   2) parent=childElement.parent
+--> parent.removechild(childname);
+
+////////////////////////////////////////////////////////////
+
+// CSS Mainipulation
+
+.style.property=value               // single values can set
+.style.cssText=value                // multiple values can be set
+.setattribute("attribute","value"); // existing remove and add new one
+.className                          // returns string
+.classList                          // returns array
+
+
+
+Event
+
+--> Event
+--> response to Event
+--> data store in Event
+--> how to stop
+--> lifecyle of Event
+
+  1) monitorEvents(document)
+--> to showcase event on console
+--> form > submit > action
+
+  2) EventTarget
+--> interface
+--> object implimented by the object that can revice events and may have listener event
+--> Top level interface
+
+  3) addEventListner()
+--> listen / response / hook
+--> Syntex
+    <event_target_name>.addEventListner(<event_type_name>,<function_call>,usecapture ( optional))
+--> event_target_name
+    Ex. component
+--> event_type_name
+    Ex. click / double click / scroll
+--> function_call
+    what to do on event happing
+
+  4) removeEventListner()
+--> Syntex
+    <event_target_name>.removeEventListner()(<event_type_name>,<function_call>)
+--> function passed in rEL and aEL must be same object
+--> same event EventTarget
+--> same event event_type
+--> same event function
+--> inspect > event listiner
+
+  5) dispatchEvent()
+--> (HW) 
+
+
+Phases of event
+
+--> Capturing phase (move from top to target)   --> usecapture set to true
+--> At target phase (at target)                 --> 
+--> Bubbling phase  (move from target to top)   --> (default)
+
+# when an event occurs then addEventListner gets event object it contains lot of 
+  info about event 
+
+# to prevent default event >>  eventobj.preventDefault
+
+# Syntex:
+
+(select_element).addEventListener(
+   ' ',
+   function(event){
+   event.preventDefault();
+   }; 
+);
+
+# avoid many event to optimise code
+
+# target property
+
+--> event_obj.target.textContent
+--> event_obj.target.nodename
+
+# Best practice
+
+  <head>
+     <script>
+     document.addEventListener('DOMcontentLoaded', fnx(){});
+     </script>
+  </head>
+
+
+More
+
+https://www.w3schools.com/js/js_htmldom_navigation.asp
+https://www.w3schools.com/js/js_htmldom_nodes.asp
+https://www.w3schools.com/js/js_htmldom_collections.asp
+https://www.w3schools.com/js/js_htmldom_nodelist.asp
+
+
+Error Handling
+
+Type of Error:
+
+ 1) Compile time // durnig parsing 
+ 2) RunTime Error // during execution
+
+ # Try and catch
+ # based on condition of error
+ 
+ // custom error handle
+ // write this block inside the catch block  / anywhere there is error condtion
+ throw(){
+
+ }
+
+ try{
+   // code in which there is possibility of error 
+   // Error aate hei catch block meai joo ge
+ }
+
+ catch(e){
+   // handle error
+   // this will run when error occur
+ }
+
+ finally{
+  // this will run every time
+ }
 
 Grabage Collector (auto)

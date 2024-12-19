@@ -1,8 +1,10 @@
+// Note: event listner function must be same in add and remove
+
 // right way
 function call(){
     console.log("I have click on document");
 }
-
+ 
 document.addEventListener('click',call());
 
 document.removeEventListener('click',call());

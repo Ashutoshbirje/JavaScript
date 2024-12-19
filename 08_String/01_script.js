@@ -1,8 +1,11 @@
 // string declaration
+// double quated string
 let a="ashu";
 console.log(a);
+// single quated string
 let b='ashu';
 console.log(b);
+// Template string
 let c=`q 
 w`;
 console.log(c);
@@ -30,13 +33,13 @@ let s4=`ass`;
 let s5=`sdds`;
 let s6=`${s4}${s5}`;
 console.log(s6);
-
+ 
 // find char at index
-console.log(s5.charAt(0));
-console.log(s5.at(1));
-console.log(s5[2]);
+console.log(s5.charAt(0)); // allow -ve (size-ve : meaning)(if not exist the return empty string)
+console.log(s5.at(1)); // not allow -ve
+console.log(s5[2]); // (if not exist the return undefined)
 
-// UTF-16 code value
+// UTF-16 code value (0 to 65535)
 console.log(s5.charCodeAt(0));
 
 // L to U
@@ -49,16 +52,21 @@ let s8="ASHU";
 s8=s8.toLowerCase();
 console.log(s8);
 
-// substring
+// extract a part of a string
+// substring(start, end)
 let s9="ashutosh";
 let s10=s9.substring(1);
 console.log(s10);
 let s11=s9.substring(2,4); // 4 exclude
 console.log(s11);
-let s12=s9.substr(1);
+
+// substr(start,length)
+let s12=s9.substr(1,2);
 console.log(s12);
 let s13=s9.substr(1,2);
 console.log(s13);
+
+// slice(start,end)
 let s14=s9.slice(3,4); // 4 exclude
 console.log(s14);
 
@@ -90,5 +98,6 @@ console.log(s18);
 let s19=s17.join(' ');
 console.log(s19);
 
-
+// Escape character (\)
+// \b \f \n \r \t \v
  

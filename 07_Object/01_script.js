@@ -1,4 +1,5 @@
 //////////////////// CREATE ////////////////////
+
 // create with obj Literal
 let obj={
     // obj property
@@ -16,7 +17,12 @@ let obj={
 
     fullname:function(){
         return this.name+" "+this.age;
+    },
+
+    fulldata(){
+        return this.name+" "+this.age;
     }
+
 }
 
 
@@ -62,11 +68,10 @@ for(let key in obj){
     console.log(key," ",obj[key]);
 }
 
-// for -of
-// ??
-// for(let [obj ,value] of Object.entries(obj)){
-//     console.log(obj+" "+value);
-// }
+// make it simple to use in the loop
+for(let [obj ,value] of Object.entries(obj)){
+    console.log(obj+" "+value);
+}
 
 // store in array
 const arr=Object.values(obj);

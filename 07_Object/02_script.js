@@ -13,6 +13,10 @@
 // console.log(Math.sqrt(9));
 // console.log(Math.pow(2,10));
 
+// More
+// https://www.w3schools.com/js/js_math.asp
+
+
 // Date
 let curr=new Date();
 console.log(curr);
@@ -26,4 +30,12 @@ console.log(date1);
 date.getDate();
 date.setMonth(2);
 console.log(date);
+
+// More
+// https://www.w3schools.com/js/js_dates.asp
+// https://www.w3schools.com/js/js_date_formats.asp
+// https://www.w3schools.com/js/js_date_methods.asp
+// https://www.w3schools.com/js/js_date_methods_set.asp
+
+
 
