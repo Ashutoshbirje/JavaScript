@@ -17,40 +17,19 @@ L 45
 
 L 46 
 
+ // DONE
 
 L 47
 
-// DONE
+ // DONE
 
 L 48
 
-// DONE
+ // DONE
 
 L 49
 
-# Performance
---> measure speed of code
---> efficent and optimize code
---> event loop
-
---> Performance.now();
---> Reflow  (mathematical calulation)
---> Repaint (to show on display pixel by pixel)
---> fregment concept
-
-# call Stack
---> single thread language
---> one command at a time
---> top se bottom execution
---> Run to complition
---> JS does not execution multiple line at a time
-
-# event loop
---> synchrozation ( occuraing in the same time )
---> not a synchrozation ( event )
->> call stack >> browser >> Event Queue
-
---> Philp Robert (Youtube)
+ // DONE
 
 L 50
 --> synchrozation ( occuraing in the same time )
@@ -67,8 +46,6 @@ L 50
 --> ( post / get / put / delete)
 
 // Pending
-# Promise
---> To used parlle execution of things in a background
 
 L 51 
 --> Counter Project

@@ -780,4 +780,67 @@ Type of Error:
   // this will run every time
  }
 
+Performance
+ # measure speed of code
+ # efficent and optimize code
+ # event loop
+
+Method to check Performance 
+--> Performance.now();
+
+Terminology
+--> Reflow  (mathematical calulation of position or diamension)
+--> Repaint (to show on display pixel by pixel)
+--> fregment concept (createDocumentFragment())
+--> Repaint is faster than Reflow
+
+fregment
+--> light weight document object
+--> No reflow no Repaint 
+
+synchronous Code:
+--> Part of code which execute at the same time
+--> Ex. 
+function sync(){
+    console.log("first");
+}
+sync();
+
+Assynchronous Code:
+--> Part of code which do not execute at the same time
+--> Exe when callStack is empty
+--> Ex. 
+setTimeout(function(){
+    console.log('third');
+},3000);
+
+call Stack
+--> when any function call then the entry is created in the stack
+--> when any function executed then its entry removed from the callstack
+--> single thread language
+--> one command at a time
+--> top se bottom execution
+--> Run to complition
+--> JS does not execution multiple line at a time
+
+event loop
+--> synchrozation ( occuraing in the same time )
+--> not a synchrozation ( event ) >> browser
+--> When timer over then it will added to >> Event Queue
+--> When call stack is empty then it will fill by entires of Event Queue
+
+More:
+--> Philp Robert (Youtube)
+
+Promise
+--> To used parlle execution of things in a background
+--> It is an object which handle complition of an assynchronous code and its returning value
+--> Way to handle the Assynchronous code 
+--> Two state (Resolve / Reject)
+--> ( Resolve : The promise resolve sussessfully) --> then()
+--> ( Reject : The promise fail before complition) --> catch()
+--> finally()
+
+asyn-await
+
 Grabage Collector (auto)

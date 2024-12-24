@@ -1,4 +1,4 @@
-// // code 1
+// code 1
 const t1=performance.now();
 for (let i = 1; i <=100; i++) {
   let para = document.createElement('p');
