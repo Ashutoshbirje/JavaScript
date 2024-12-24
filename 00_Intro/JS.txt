@@ -797,6 +797,7 @@ Terminology
 fregment
 --> light weight document object
 --> No reflow no Repaint 
+--> virtual DOM
 
 synchronous Code:
 --> Part of code which execute at the same time
@@ -828,12 +829,14 @@ event loop
 --> not a synchrozation ( event ) >> browser
 --> When timer over then it will added to >> Event Queue
 --> When call stack is empty then it will fill by entires of Event Queue
-
+    
 More:
 --> Philp Robert (Youtube)
+--> https://www.youtube.com/watch?v=8aGhZQkoFbQ&ab_channel=JSConf
+--> http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
 
 Promise
---> To used parlle execution of things in a background
+--> To used parllel execution of things in a background
 --> It is an object which handle complition of an assynchronous code and its returning value
 --> Way to handle the Assynchronous code 
 --> Two state (Resolve / Reject)
@@ -842,5 +845,24 @@ Promise
 --> finally()
 
 asyn-await
+--> to optimise / handle promise code
+--> async code always returns a promise
+--> We are able to show asyn code as syn code to execute in sequential manner
+--> ex.
+   {
+      async code // mark as await then it will execute first 
+      sync code 
+   }
+
+API ( Application Programming Interface)
+--> Connection b/w frontend and backend
+--> Establish communication between frontend and backend
+--> It provides an interface for fetching resource 
+--> ( post / get / put / delete)
+
+https://jsonplaceholder.typicode.com/
+
+Closures:
+--> function when it is binded together with required data then it forms a Closure
 
 Grabage Collector (auto)

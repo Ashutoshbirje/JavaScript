@@ -17,7 +17,6 @@
 
 // // Promise
 // let mypromise = new Promise(function(resolve,reject){
-
 //     // syn code
 //     // console.log('I am promise');
 //     // resolve(100);

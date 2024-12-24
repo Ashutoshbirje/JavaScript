@@ -5,7 +5,7 @@ for (let i = 1; i <=100; i++) {
   para.textContent="This is Para "+i;
   // n reflow and n repaint
   document.body.appendChild(para);
-}
+} 
 const t2=performance.now();
 console.log(t2-t1);
 
@@ -24,6 +24,7 @@ const t4=performance.now();
 console.log(t4-t3);
 
 // optimise
+const t5=performance.now();
 let fregement=document.createDocumentFragment();
 for (let i = 1 ;i <= 100; i++) {
     let para=document.createElement('p');
@@ -33,6 +34,9 @@ for (let i = 1 ;i <= 100; i++) {
 }
 // 1 reflow and 1 repaint
 document.body.appendChild(fregement);
+const t6=performance.now();
+console.log(t6-t5);
+
 
 // # single thread
 function addPara(){
