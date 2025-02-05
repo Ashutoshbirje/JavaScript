@@ -68,15 +68,19 @@ Comment:
 Variable:
 
  # Variable Named memory loaction
+
  # Syntex
 --> (let/var/const/auto) Variable_NAME = VALUE ;
+
  # Rule
 --> Cannot be a reserved keyword
 --> Meaningful
 --> Cannot start with a number,sign
 --> Cannot contain space / '-'
 --> cammal_Case_Language
+
  # properties
+
           Scope Redeclare Reassign Hoisted Binds-this
    var     N      Y          Y       Y        Y           
    let     Y      N          Y       N        N           
@@ -272,7 +276,6 @@ Break and Continue:
   # Break : Jumps out the loop
   # Continue : Jumps over the one iteration in the loop
 
- 
 Function:
 
 --> block of code that perform specific task when it is calls
