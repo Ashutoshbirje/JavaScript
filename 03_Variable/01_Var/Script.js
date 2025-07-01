@@ -16,13 +16,13 @@
 // // console.log(age); // ERROR
 
 // no block scope
-console.log(a); 
-{
-    var a=10;
-    console.log(a);
-    // console.log(s);
-}
-console.log(a); 
+// console.log(a); 
+// {
+//     var a=10;
+//     console.log(a);
+//     // console.log(s);
+// }
+// console.log(a); 
 
 // // reassign meai error nahi ayega (debug issue)
 // var x=10;
@@ -31,3 +31,9 @@ console.log(a);
 // // update kar sakte heai
 // x=30
 // console.log(x);
+
+// hoisting
+
+console.log(x);
+var x=10;
+

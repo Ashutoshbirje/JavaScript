@@ -52,7 +52,7 @@ complition:
 --> VS CODE (ON GITHUB) > SetUp env For Diffrent Feature (Nodejs Installation)
 --> File > View > Command pallet > container > Add Dev container configuration file > show all definition > select 
 --> OK > ReBuilt 
-
+ 
 implimention:
 
   # code is inserted between <script> </script>
@@ -86,17 +86,18 @@ Variable:
 --> cammal_Case_Language
 
  # properties
-
-          Scope Redeclare Reassign Hoisted Binds-this
-   var     N      Y          Y       Y        Y           
-   let     Y      N          Y       N        N           
-   const   Y      N          N       N        N
+                                   declaration 
+          Scope Redeclare Reassign  Hoisted     Binds-this
+   var     N      Y          Y        Y              Y           
+   let     Y      N          Y        N              N           
+   const   Y      N          N        N              N
 
    scope  function global block
    var       Y       Y      N
    let       Y       Y      Y
    const     Y       Y      Y
 
+--> var has problem in block scope to overcome this let is introduce 
 
 datatype:
 
