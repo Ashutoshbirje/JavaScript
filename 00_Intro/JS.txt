@@ -34,7 +34,7 @@ complition:
   # As to run any programming language we need compiler also to run any JS code we need < JS engine > 
   # < JS engine > converts source code into machine code to render data on browser
   # Ex. firefox ( spaider monkey ) chrome ( v8 ) those are example of < JS engine >
-  # (c++ + js) --> Node 
+  # (c++ + js) --> Nodejs / Denojs (Software)
   # How to run 
 
  1) On Web console 
@@ -46,6 +46,12 @@ complition:
  2) Vs-code & node js 
 --> (right click > run code)
 --> (cmd : node file_name.js)
+
+ 3) Github
+--> Create New repository > Code > Codespace > Create codespace on main 
+--> VS CODE (ON GITHUB) > SetUp env For Diffrent Feature (Nodejs Installation)
+--> File > View > Command pallet > container > Add Dev container configuration file > show all definition > select 
+--> OK > ReBuilt 
 
 implimention:
 
