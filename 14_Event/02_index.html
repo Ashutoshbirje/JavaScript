@@ -1,0 +1,42 @@
+<!-- Done -->
+<!-- On pressing start button print will start  -->
+<!-- On pressing stop button print will stop  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+    <script>
+    
+        // Function definition 
+        const sayHi = function (str){
+           console.log(`Hi ${str}`);
+        }
+    
+        // Execution flow start from here 
+        // console.log("Hello")
+    
+        // const intervalId1 = setInterval(()=>{
+        //    console.log("Ashutosh")
+        // },2000)
+     
+        // clearInterval(intervalId1);
+        // console.log("Hello") 
+    
+        let intervalId = setInterval(sayHi,1000,"Ashutosh");
+        
+        document.querySelector("#stop").addEventListener("click",()=>{clearInterval(intervalId)})
+        
+        document.querySelector("#start").addEventListener("click",()=>{intervalId = setInterval(sayHi,1000,"Ashutosh");
+    })
+
+    </script>
+</body>
+</html>

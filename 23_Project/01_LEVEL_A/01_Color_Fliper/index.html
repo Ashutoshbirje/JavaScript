@@ -1,0 +1,43 @@
+<!-- When we click on START button backgraound color will change after every 1 sec -->
+<!-- When we click on STOP button this functinality will stop -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Changer</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body id="screen">
+  <div class="div">
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+  </div>
+  <script>
+    let intervalId = null;
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    document.querySelector("#start").addEventListener("click", () => {
+      if (intervalId !== null) return;
+      intervalId = setInterval(() => {
+        document.getElementById("screen").style.backgroundColor = getRandomColor();
+      }, 1000);
+    });
+
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearInterval(intervalId);
+      intervalId = null;
+    });
+    
+  </script>
+</body>
+</html>

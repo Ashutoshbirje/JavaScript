@@ -1,0 +1,179 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #000; /* Black background */
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent card */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(40, 40, 40, 0.3);
+    border: 2px solid transparent; /* Initial border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition for all */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight scaling effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+    border: 2px solid #4b4848; /* White border on hover */
+}
+
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.name {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.role {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 10px 0 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.btn-primary {
+    background: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    color: #fff;
+}
+
+  .share-profile-modal {
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1.7);
+    text-align: center;
+    max-width: 340px;
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: auto;
+    left: auto;
+    display: none;
+  }
+  
+  .display{
+    display: block;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header h2 {
+    font-size: 20px;
+    margin: 0;
+    color: white;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .subtext {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+  
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .icon i {
+    font-size: 18px;
+  }
+  
+  .icon.facebook {
+    color: #1877f2;
+    border-color: #1877f2;
+  }
+  
+  .icon.twitter {
+    color: #1da1f2;
+    border-color: #1da1f2;
+  }
+  
+  .icon.instagram {
+    color: #e1306c;
+    border-color: #e1306c;
+  }
+  
+  .icon.whatsapp {
+    color: #25d366;
+    border-color: #25d366;
+  }
+  
+  .icon.telegram {
+    color: #0088cc;
+    border-color: #0088cc;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  

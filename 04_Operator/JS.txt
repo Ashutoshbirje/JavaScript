@@ -1,0 +1,50 @@
+# Operator
+
+1) Unary
+--> pre increment(++a)
+--> pre decrement(--a)
+--> post increment(a++)
+--> post decrement(a--)
+--> Assignment operator(=)
+
+2) Binary
+  1) Arithmetic
+--> ( - , + , * , / , % ,**)
+
+  2) Comparison
+--> ( > , < , >= , <= , == , != , === , !==)
+--> ( == ) check for only value
+--> ( === ) check for both value and data type
+
+  3) Logical  
+--> ( applied on both booleans and both Non-booleans)
+    ( AND (&&) / OR(||) / NOT(!) )
+--> ( applied on booleans and Non-booleans and vice-versa)
+    ( consept of False and True )
+    Truthy : Any thing that is not fallcy
+    Fallcy : undefined , null , 0 , false , NaN
+
+
+  4) Bitwise
+--> ( & , | , ! , >> , << , ^)
+   A  B  &  |     
+   0  0  0  0  
+   0  1  0  1 
+   1  0  0  1
+   1  1  1  1
+
+  5) Assignment operator
+--> (=,+=,-=,*=,^=,%=,**=,<<=,>>=,>>>=,&=,^=,|=,&&=,||=,??)
+--> The ??= operator is used between two values. If the first value is undefined or null, the second value is assigned.
+--> The ?. operator returns if an object is undefined or null
+
+  6) String addtion
+--> (+)
+
+  7) Nullish coalescing operator (??): null undefined 
+
+3) Ternary 
+--> ( (cnd) ? true : false );
+
+# Operatior Precedence
+--> ( () , * , / , + , -)

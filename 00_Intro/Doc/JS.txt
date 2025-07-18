@@ -1,0 +1,1091 @@
+/////////////////////////:JavaScript://///////////////////////:
+
+https://javascript.info/
+
+About:
+
+  # used to provide functionallity for webpage
+  # scripting language / light-weight programming language
+  # clinet-slide scripting language 
+  # interpreted
+  # Slow / Synchronous / Single threaded 
+  # Dynamiclly typed language
+
+History:
+
+  # JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.
+  # mocka > live script > jscript > ECMAscript > ES123 > ES5 > ES6 > Java Script
+
+Need:
+
+  # used to make game , web app , mobile app , andrioid app , CLI tools
+
+setup:
+
+  # browser > Setting > Search > JS > Off
+  # right click > insepect > source > snippets > new snippets
+  # https://tc39.es/ecma262/
+
+Java Vs JavaScript:
+
+   # Compiled language            # Interpreted language 
+   # Fast                         # Slow
+   # java, C, C++, Swift          # javascript, Python, Ruby
+ 
+complition:
+
+  # As to run any programming language we need compiler also to run any JS code we need < JS engine > 
+  # < JS engine > converts source code into machine code to render data on browser
+  # Ex. firefox ( spaider monkey ) chrome ( v8 ) those are example of < JS engine >
+  # (c++ + js) --> Nodejs / Denojs (Software)
+  # How to run 
+
+ 1) On Web console 
+--> (right click > insepect > console)
+--> Clear console : Ctrl + L
+--> Run : Ctrl + Enter 
+--> Clear Data Memory : Ctrl + R / Ctrl + Shfit + R 
+
+ 2) Vs-code & node js 
+--> (right click > run code)
+--> (cmd : node file_name.js)
+ 
+ 3) Github
+--> Create New repository > Code > Codespace > Create codespace on main 
+--> VS CODE (ON GITHUB) > SetUp env For Diffrent Feature (Nodejs Installation)
+--> File > View > Command pallet > container > Add Dev container configuration file > show all definition > select 
+--> OK > ReBuilt 
+
+implimention:
+
+  # code is inserted between <script> </script>
+  # implement in HTML doc in <head> / <body> both
+  # implement in external file with (.js) extension
+
+OutPut:
+
+ # Writing into an HTML element, using innerHTML.
+ # Writing into the HTML output using document.write().
+ # Writing into an alert box, using window.alert().
+ # Writing into the browser console, using console.log().
+
+Comment:
+
+ # Single line // 
+ # Multi line /* */
+
+Stack and Heap memory in javascript 
+
+--> Stack (Primitive Data type)
+--> We get copy of variable
+
+--> Heap (Non-primitive)
+--> We get reference of variable
+
+Variable:
+
+ # Variable Named memory loaction
+
+ # Syntex
+--> (let/var/const/auto) Variable_NAME = VALUE ;
+
+ # Rule
+--> Cannot be a reserved keyword
+--> Meaningful
+--> Cannot start with a number,sign
+--> Cannot contain space / '-'
+--> cammal_Case_Language
+
+ # properties 
+
+          Scope Redeclare Reassign Hoisted Binds-this
+   var     N      Y          Y       Y        Y           
+   let     Y      N          Y       N        N           
+   const   Y      N          N       N        N
+
+ # Scope
+
+1) global scope 
+--> any where we can use
+
+2) Function scope
+--> within a function
+
+3) Block scope
+--> within a block and below the block
+
+   scope  function global block
+   var       Y       Y      N
+   let       Y       Y      Y
+   const     Y       Y      Y
+
+datatype:
+
+ # typeof() typeof __
+ # instanceof()
+ # Primitive are copied by their value
+ # Non-primitive / Reference are copied by their address
+
+ # dynamic typing
+
+--> we can assign different kind of datatype to the varible ( let / var ) at different instance
+
+--> Based on how they are stored in memory and access from memory there are two types 
+
+1) Premitive 
+--> ( String / Number / Boolean / Bigint / undefined / Null / Symbol)
+--> Size of the data type is fixed
+--> Javascript numbers are always one type:
+    double (64-bit floating point).
+--> Data Type of Null is object 
+
+ # Reference Types
+
+1) Non - Premitive / Reference (Data type is object)
+--> ( object / array / function)
+
+ 1) Objects
+    (multiple var linked to single entitiy) 
+--> Syntex
+    (let/var/const) obj_name = {
+      // obj property
+         property:value;
+      // obj method
+         obj_method:function(){
+          // method body
+         },
+    }
+
+--> How to access Objects
+    i) Dot Notation  (obj.property)
+    ii) Bracket Notation (obj[property])
+
+ 2) Arrays
+    (Collection of item that may be different or same)
+--> Syntex
+    (let/var/const) array_name = [ , ,...]; 
+--> How to access array element
+    i) Array_name[index]
+    ii) Array_name[index]=new_value
+
+ 3) Functions 
+    (Block of statement that execute when function is called)
+--> Syntex
+    const value = function (){
+      // function body
+    }
+
+--> Type of function
+    1) Normal Function 
+    2) Arrow function
+    3) Expression function
+    4) Void function
+
+--> How to call function
+    function_name();
+
+CONVERSION  datatype_name(value)
+
+1) Number conversion
+Datatype --> Number    Datatype   value
+Number                 number     value
+Boolean                number     true --> 1 / false --> 0
+String                 number     NaN 
+null                   number     0
+undefined              number     NaN
+
+2) Boolean conversion 
+Datatype --> Number    Datatype   value
+Number                 Boolean    1 --> true / 0 --> false
+Boolean                Boolean    value
+String                 Boolean    "" --> false / "a" --> true
+null                   Boolean    
+undefined              Boolean    
+
+2) String conversion 
+Datatype --> Number    Datatype   value
+Number                 string     value
+Boolean                string    
+String                 string     value
+null                   string    
+undefined              string    
+
+Operator
+
+1) Unary
+--> pre increment(++a)
+--> pre decrement(--a)
+--> post increment(a++)
+--> post decrement(a--)
+--> Assignment operator(=)
+
+2) Binary
+  1) Arithmetic
+--> ( - , + , * , / , % ,**)
+
+  2) Comparison
+--> ( > , < , >= , <= , == , != , === , !==)
+--> ( == ) check for only value (conversion)
+--> ( === ) check for both value and data type
+--> When comparing a string with a number, JavaScript will convert the string to a number when doing the comparison.
+--> comparison converrts null to number 
+--> Ex. false == 0 --> true
+        false == '' --> true 
+        0 == '' --> true 
+
+  3) Logical  
+--> ( applied on both booleans and both Non-booleans)
+    ( AND (&&) / OR(||) / NOT(!) )
+--> ( applied on booleans and Non-booleans and vice-versa)
+    ( consept of False and True )
+    Truthy : Any thing that is not fallcy / "0" / 'false' / " " / [] / {} / function(){}
+    Fallcy : undefined , null , 0 , -0 , false , NaN , "" , BigInt 0n
+
+  4) Bitwise
+--> ( & , | , ! , >> , << , ^)
+   A  B  &  |     
+   0  0  0  0  
+   0  1  0  1 
+   1  0  0  1
+   1  1  1  1
+
+  5) Assignment operator
+--> (=,+=,-=,*=,^=,%=,**=,<<=,>>=,>>>=,&=,^=,|=,&&=,||=,??)
+--> The ??= operator is used between two values. If the first value is undefined or null, the second value is assigned.
+--> The ?. operator returns if an object is undefined or null
+
+  6) String addtion
+--> (+)
+
+  7) Nullish coalescing operator (??): null undefined 
+
+3) Ternary 
+--> ( (cnd) ? true : false );
+
+Operatior Precedence
+--> ( () , * , / , + , -)
+
+Control / Conditional Statement
+
+--> if
+   if(cnd){
+
+   }
+
+--> if - else
+   if(cnd){
+
+   } else {
+
+   }
+
+--> if - else if - else
+   if(cnd){
+
+   } else if (cnd) {
+
+   } else {
+
+   }
+
+--> switch case
+   switch(term){
+    case :
+        break;
+    case :
+        break;
+    case :
+        break;
+        .
+        .
+        .
+    default:
+        break;
+   } 
+
+Loops:
+
+--> For Loop
+   for( initilization ; condition ; Updation ){
+
+   }
+     
+--> while Loop
+   while( cnd ){
+
+   }
+
+--> Do-while Loop
+   do {
+
+   } while ( cnd );
+
+--> Infinte Loop
+
+--> For-in Loop ( Apply on object, array)
+--> loops through the properties of an object
+   for ( let __ in ___ ){
+      console.log(__, ___[__]);
+   }
+
+--> For-each Loop (Array.forEach(fnx_call()))
+   fnx fnx_name(value,index,array){
+   }
+--> No return type
+
+--> For-of Loop ( Apply on itrabale like array , maps , strings, maps , Nodelists )
+--> loops through the values of an iterable object
+   for ( let __ of object){
+      console.log(___);
+   }
+
+Break and Continue:
+
+  # Break : Jumps out the loop
+  # Continue : Jumps over the one iteration in the loop
+
+Function:
+
+--> block of code that perform specific task when it is calls
+--> Dynamic in Nature
+--> Functions are objects (arguments.length)
+
+# use:
+
+--> reusability
+
+# Syntex
+
+1) Non-Return Type
+   # Function Declaration (hoisting)
+--> function name_fnx(para_1,para_2,...){
+     // function body
+     // para behave as local Variable
+    }
+   # call
+--> name_fnx(argument);  // Call / Execution 
+--> name_fnx     // Refrence 
+   # May or may not be end with the semicolon
+
+2) Return Type
+   a) normal function
+   # Named Function Assignment (No hoisting)
+--> (let/var) var_name = function name_fnx(para_1,para_2,...){
+     // function body
+     return <>;
+    }; 
+   # call
+--> var_name; (refers to function object)
+--> var_name(); (refers to function result)
+   # May or may not be end with the semicolon
+ 
+   b) exp function
+   # Expression Function Assignment (No hoisting)
+   # Anonymous (A function without name) Function Assignment (No hoisting)
+--> (let/var) var_name = function (para_){
+     // function body
+      return <>;
+    };
+   # call
+--> var_name();
+   # May or may not be end with the semicolon
+
+   c) arrow function
+   # Arrow Function Assignment (No hoisting)
+--> (let/var) var_name = (para_)=>{
+     // function body
+      return <>;
+    };
+   # call
+--> var_name();
+   # May or may not be end with the semicolon
+
+3) Built-in Declaration:
+   
+   # Syntex
+--> const var_name = new Function("function body","return <>");
+   # call
+--> var_name();
+
+4) Self-Invoking Function:
+
+   # anonymous self-invoking function 
+   # Function are invoked automatically without being call 
+   # Syntax:
+--> (function defination)();
+
+# about parameter passing
+--> If we pass exact para the result is ok
+--> If we pass less para the result is NaN
+--> If we pass zero para the result is NaN
+--> If we pass more para the result is ok
+
+# Function parameter : Those are names listed in the function defination
+--> JavaScript function definitions do not specify data types for parameters.
+--> JavaScript functions do not perform type checking on the passed arguments.
+--> JavaScript functions do not check the number of arguments received.
+
+# default parameter
+--> declare at the end
+ 
+# rest parameter (Array)
+--> declare at the end
+--> The rest parameter (...) allows a function to treat an indefinite number of arguments as an array
+
+# Function argument : Real value passed to the function
+
+# Callback 
+--> Function pass as an argument to another fucntion which is then executed after some 
+    operation is completed 
+--> Used in asynchronous programming 
+
+# setTimeout
+--> Exacute a fiunction once after specified delay (in milliseconds)
+--> setTimeout(function, delayInMilliseconds);
+
+# setInterval 
+--> Reapeateadly executes a function every given interval (in milliseconds)
+--> setInterval(function, intervalInMilliseconds);
+
+
+More:
+1) https://www.w3schools.com/js/js_function_invocation.asp
+2) https://www.w3schools.com/js/js_function_call.asp
+3) https://www.w3schools.com/js/js_function_apply.asp
+4) https://www.w3schools.com/js/js_function_bind.asp
+5) https://www.w3schools.com/js/js_function_closures.asp
+
+
+Hoisting:
+
+
+
+
+Object
+
+ # collection of key-value pair
+ # Comparing two JavaScript objects always return false.
+ # they are dynamic in nature as we can change the properties of obj on run time
+ # Object oriented programming language
+ # Every object has it's own Constructor (obj.Constructor)
+ # Everything is an object exxept Primitive
+ # Dynamic Nature of Object
+ # addtion of property and deletion of property is possible
+ # Object are Mutable
+
+Object Creation
+
+ 1) factory function
+
+ 2) Create an Object Literal
+
+ (var/let/const) var_name={
+    // obj property
+    property:value,
+    key:value,
+
+    // obj method
+    method_name: function(){
+
+    },
+    method_name(){
+
+    },
+  }
+
+ 3) Using the new Keyword
+
+ (var/let/const) var_name= new Object();
+ (var/let/const) var_name= { };
+
+ 4) Using an Object Constructor
+
+--> to add new properties and method use prototype
+ function fnx_name(para1,para2...){
+    this.property=value;
+    this.method=function(){
+        return <>;
+    }
+ }
+ (var/let/const) var_name= new fnx_name();
+
+Call
+
+// call obj method
+ objectName.method_name()
+
+// call property
+ objectName.propertyName
+ objectName["propertyName"]
+
+Object Cloning
+
+ 1) iteration
+ 2) assign Object.assign({} src);
+ 3) spread (...)
+
+inbulit object
+
+ 1) Math
+ 2) string
+ 3) Date
+
+# Shallow copy
+--> Object copy which share same refrence point (Heap)
+
+# Deep copy 
+--> Object do not sahre same reffrence 
+
+# Nesting of object is possible 
+
+More:
+1) https://www.w3schools.com/js/js_object_definition.asp
+2) https://www.w3schools.com/js/js_object_prototypes.asp
+3) https://www.w3schools.com/js/js_object_methods.asp
+4) https://www.w3schools.com/js/js_object_properties.asp
+5) https://www.w3schools.com/js/js_object_accessors.asp
+6) https://www.w3schools.com/js/js_object_protection.asp
+
+
+String:
+
+
+
+
+
+
+Array:
+--> It is an object stores a collection of multiple items under a single variable 
+
+// MAP 
+
+// FILTER
+
+// REDUCE
+
+ # OOPS 
+ 
+ # Part of OOPS
+ 1) Object:
+ 2) Class:
+ 3) Consturcotor function 
+ 4) Prototypes
+ 5) Instances (new,this)
+
+ # 4 pillers of OOPS 
+ 1) Abstraction 
+ 2) Encapsution 
+ 3) Inheritance 
+ 4) Polymorphism
+
+ # NEW 
+--> New object is created: the new keyword initialies the creation of 
+    a new JavaScript object 
+--> Prototype Linking: The newly created object gets linked to the prototype 
+    property of the constructor function. this means that it has access to 
+    propertyes and methods defined on the consturtor's prototype 
+--> The constructor is called: the constructor function is called with 
+    the specified argurments and this is bound to the newly created object.
+    If no explicit return value is specified from the constructor, JavaScript asssumes this
+    the newly created object, to be the intended return value 
+--> New object is returned: After the constructor function has been called, if it doesn't 
+    return a non-primitive value (object, aaray, function etc) the newly created object is 
+    returned 
+
+Prototype
+(object / array / string ) --> object --> null 
+
+API (Application Programming Interface)
+--> JSON Format value 
+{
+  "name": "ashutosh",
+  "prn": "57"
+}
+
+[
+ {
+  "name": "ashutosh",
+  "prn": "57"
+ }
+ {
+  "name": "ashutosh",
+  "prn": "57"
+ }  
+]
+
+Window 
+--> global object
+--> create by browser 
+--> represent a browser Window
+--> it contains DOM, BOM, JScore function
+--> Used to control browser Window
+--> window.open(), window.close()
+--> Enter window in the browser console 
+--> console.log(window) (Try on web brawser)
+
+BOM
+--> browser object model
+--> rather than content of web page
+
+DOM
+--> Document object model (Conversion of JS code to object)
+--> document , document.body ....
+--> Tree like structure of object
+--> char > tag > token > nodes > DOM
+--> Standard for accessing documents
+--> console.log(window.document) (Try on web brawser)
+--> console.log(document) (Try on web brawser)
+
+Key benifit:
+--> JavaScript can change all the HTML elements in the page
+--> JavaScript can change all the HTML attributes in the page
+--> JavaScript can change all the CSS styles in the page
+--> JavaScript can remove existing HTML elements and attributes
+--> JavaScript can add new HTML elements and attributes
+--> JavaScript can react to all existing HTML events in the page
+--> JavaScript can create new HTML events in the page
+
+HTML DOM:
+--> all HTML element defined as Object
+--> DOM object represents web page
+
+Method:
+--> actions you can perform on HTML elements
+
+Properties:
+--> values that you can set or change 
+
+////////////////////////////////////////////////////////////
+
+                       Window 
+
+                      Document
+ 
+                        HTML
+
+             HEAD                   BODY
+
+             title                  div
+
+             text               h1         p
+
+////////////////////////////////////////////////////////////
+
+# Object: Document
+
+# method: 
+
+  1) getElementbyID("ID_NAME");
+--> returns single element as object ow null
+--> method of document
+
+  2) getElementbyClassName("CLASS_NAME");
+--> returns multiple element / html collection
+--> Array like entitiy
+--> HTML Collection
+
+  3) getElementsByTagName("TAG_NAME");
+--> returns multiple element
+--> Array like entitiy
+--> HTML Collection
+
+  4) querySelector("#demo / .demo / Tagname");
+--> returns single element
+--> return first entry
+
+  5) querySelectorAll("#demo / .demo / Tagname");
+--> returns multiple element / node list
+
+# hover on tag in document and enter $0 in console
+
+# select element in html document
+// document
+// document.children
+// document.firstElementChild
+// document.lastElementChild
+// document.firstchild
+// document.lastchild
+// document.nextElementSibling
+// document.createTextNode("Text")
+// document.getElementById("demo");        // RETURN single eleemnt
+// document.getElementsByClassName("btn"); // RETURN array
+// document.getElementsByTagName("li");    // RETURN array
+// document.querySelector("button");       // RETURN single eleemnt
+// document.querySelector(".btn");         // RETURN single eleemnt
+// document.querySelector("#demo");        // RETURN single eleemnt
+// document.querySelectorAll("button");    // RETURN array
+// document.querySelectorAll(".btn");      // RETURN array
+// document.querySelectorAll("#demo");     // RETURN array
+
+////////////////////////////////////////////////////////////
+
+# HTML Mainipulation
+
+(Update existing contact)
+
+# object: select item from selection method
+
+# method: 
+
+   1) .innerHTML;
+--> get / set HTML element 
+--> inner tag consideras tag only 
+--> gets an element / all desendents
+--> item.innerHTML
+--> sets an element's HTML content
+--> item.innerHTML="value"
+
+   2) .outerHTML;
+--> 
+-->
+--> 
+
+   3) .textContent;
+--> get / set HTML content  
+--> along with visible unvisible content also shown 
+--> inner tag consideras text only 
+
+   4) .innerText;
+--> get / set HTML content    
+--> visible contain on web will return 
+--> follow properties (display : hidden / none)
+
+   5) .classlist;
+--> .classlist.add("classname");
+--> .classlist.remove("classname");
+--> .classlist.toggle("classname");
+
+   6) .attribute
+-->  
+
+   7) .getattribute("attribute");
+--> 
+
+   8) .setattribute("attribute","value");
+--> over write previous class 
+
+   9) .id
+--> 
+
+   10) .className
+--> 
+
+   11) .parentElement / .parentNode
+--> 
+
+   12) .childNodes 
+--> 
+   
+////////////////////////////////////////////////////////////
+
+Adding New Element / content
+
+# object: select item from selection method / document 
+
+# method: 
+
+   1) document.createElement('element');
+--> 
+
+   2) parent.appendChild(childname);
+--> append add at the end
+
+   3) parent.insertAdjcentElement((position), "contain");
+--> Called with two argument
+--> 1st argument : location / position (where)
+--> (beforebegin / afterbegin / beforeend / afterend)
+--> 2nd argument : HTML TEXT / contain (what)
+
+////////////////////////////////////////////////////////////
+
+Add text into that element
+
+# object: select item from selection method / document 
+
+# method: 
+
+   A) ().textContent=' text ';
+-->  
+
+   B) document.createTextNode('text');
+--> 
+
+   C) document.replaceChild(new,old);
+--> 
+
+   D) document.write(text);
+--> 
+
+   E) document.repalceWith();
+--> 
+
+////////////////////////////////////////////////////////////
+
+Remove Element / content
+ 
+# object: select item from selection method / document 
+
+# method: 
+
+   1) parent.removechild("childname");
+--> Opposite of appendChild
+--> must know who is child and who is parent
+--> we must know about parent
+
+   2) parent.childElement.parent
+--> parent.removechild(childname);
+
+   3) parent.remove()
+
+////////////////////////////////////////////////////////////
+
+// CSS Mainipulation
+
+.style.property=value               // single values can set
+.style.cssText=value                // multiple values can be set
+.setattribute("attribute","value"); // existing remove and add new one
+.className                          // returns string
+.classList                          // returns array
+
+
+Event
+
+--> Event
+--> response to Event
+--> data store in Event
+--> how to stop
+--> lifecyle of Event
+
+Important Topic 
+
+--> type, timestamp, defaultPrevented 
+--> target, toElement, sourceElement, currentTarget
+--> clientX, clientY, screenX, screenY
+--> altKey, ctrlKey, shfitkey, keyCode 
+
+Basic 
+
+  1) monitorEvents(document)
+--> to showcase event on console
+--> form > submit > action
+
+  2) EventTarget
+--> interface
+--> object implimented by the object that can revice events and may have listener event
+--> Top level interface
+
+  3) addEventListner()
+--> Jquery / attachEvent in early days 
+--> listen / response / hook
+--> Syntex
+    <event_target_name>.addEventListner(<event_type_name>,<function_call>,usecapture ( optional))
+--> event_target_name
+    Ex. component
+--> event_type_name
+    Ex. click / double click / scroll
+--> function_call
+    what to do on event happing
+
+  4) removeEventListner()
+--> Syntex
+    <event_target_name>.removeEventListner()(<event_type_name>,<function_call>)
+--> function passed in rEL and aEL must be same object
+--> same event EventTarget
+--> same event event_type
+--> same event function
+--> inspect > event listiner
+
+  5) dispatchEvent()
+--> (HW) 
+
+Method 
+
+  1) e.preventDefault()
+  2) e.stopPropagation()
+  3) e.preventDefault()
+
+Event Propagation
+--> If two elements are overlaped having some event then order of happing event is decided via this rule 
+
+Phase of event 
+--> Capturing phase (move from top to target)   --> usecapture set to true
+--> At target phase (at target)                 --> 
+--> Bubbling phase  (move from target to top)   --> (default) --> usecapture set to false
+
+# when an event occurs then addEventListner gets event object it contains lot of 
+  info about event 
+
+# to prevent default event >>  eventobj.preventDefault
+
+# Syntex:
+
+(select_element).addEventListener(
+   ' ',
+   function(event){
+   event.preventDefault();
+   }; 
+);
+
+# avoid many event to optimise code
+
+# target property
+
+--> event_obj.target.textContent
+--> event_obj.target.nodename
+
+# Best practice
+
+  <head>
+     <script>
+     document.addEventListener('DOMcontentLoaded', fnx(){});
+     </script>
+  </head> 
+
+More
+
+https://www.w3schools.com/js/js_htmldom_navigation.asp
+https://www.w3schools.com/js/js_htmldom_nodes.asp
+https://www.w3schools.com/js/js_htmldom_collections.asp
+https://www.w3schools.com/js/js_htmldom_nodelist.asp
+
+
+Error Handling
+
+Type of Error:
+
+ 1) Compile time // durnig parsing 
+ 2) RunTime Error // during execution
+
+ # Try and catch
+ # based on condition of error
+ 
+ // custom error handle
+ // write this block inside the catch block  / anywhere there is error condtion
+ throw(){
+
+ }
+
+ try{
+   // code in which there is possibility of error 
+   // Error aate hei catch block meai joo ge
+ }
+
+ catch(e){
+   // handle error
+   // this will run when error occur
+ }
+
+ finally{
+  // this will run every time
+ }
+
+////////////////////////////////////////////////////////////////////////////
+
+Execution context 
+--> Execute one line of code at a time 
+--> Each operation waits for the last one to complete before executing 
+
+Blocking code
+--> Block the flow of program 
+--> Read file Sync
+
+Non-Blocking code 
+--> Does not block execution 
+--. Read file async
+
+Performance
+ # measure speed of code
+ # efficent and optimize code
+ # event loop
+
+Method to check Performance 
+--> Performance.now();
+
+Terminology
+--> Reflow  (mathematical calulation of position or diamension)
+--> Repaint (to show on display pixel by pixel)
+--> fregment concept (createDocumentFragment())
+--> Repaint is faster than Reflow
+
+fregment
+--> light weight document object
+--> No reflow no Repaint 
+--> virtual DOM
+
+synchronous Code:
+--> Part of code which execute at the same time
+--> Ex. 
+function sync(){
+    console.log("first");
+}
+sync();
+
+Assynchronous Code:
+--> Part of code which do not execute at the same time
+--> Exe when callStack is empty
+--> Ex. 
+setTimeout(function(){
+    console.log('third');
+},3000);
+
+call Stack
+--> when any function call then the entry is created in the stack
+--> when any function executed then its entry removed from the callstack
+--> single thread language
+--> one command at a time
+--> top se bottom execution
+--> Run to complition
+--> JS does not execution multiple line at a time
+
+event loop
+--> synchrozation ( occuraing in the same time )
+--> not a synchrozation ( event ) >> browser
+--> When timer over then it will added to >> Event Queue
+--> When call stack is empty then it will fill by entires of Event Queue
+  
+More:
+--> Philp Robert (Youtube)
+--> https://www.youtube.com/watch?v=8aGhZQkoFbQ&ab_channel=JSConf
+--> http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
+Promise
+--> Promise object representes the eventual completion / failure of an 
+    an asynchronous operation and its resulting value
+--> To used parllel execution of things in a background
+--> It is an object which handle complition of an assynchronous code and its returning value
+--> Way to handle the Assynchronous code 
+--> Three state (Pending / Resolve / Reject)
+--> ( Pending : Initial state, nither fullfilled not rejected)
+--> ( Resolve : The promise resolve sussessfully) --> then()
+--> ( Reject : The promise fail before complition) --> catch()
+--> finally()
+
+asyn-await
+--> to optimise / handle promise code
+--> async code always returns a promise
+--> We are able to show asyn code as syn code to execute in sequential manner
+--> ex.
+   {
+      async code // mark as await then it will execute first 
+      sync code 
+   }
+
+API ( Application Programming Interface)
+--> Connection b/w frontend and backend
+--> Establish communication between frontend and backend
+--> It provides an interface for fetching resource 
+--> ( post / get / put / delete)
+--> XML type
+
+https://jsonplaceholder.typicode.com/
+https://randomuser.me/
+https://jsonformatter.org/
+
+Closures:
+--> function when it is binded together with required data then it forms a Closure
+
+Grabage Collector (auto)
+
+
+Source 
+https://www.w3schools.com/js/default.asp

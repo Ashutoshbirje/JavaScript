@@ -1,0 +1,105 @@
+  /* General body styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* To-Do List container */
+  .todo-container {
+    background: #ffffff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .todo-container h1 {
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  /* Input and button section */
+  .todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  #taskForm{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap: 10px;
+
+  }
+  #taskForm input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 19em;
+  }
+  
+  #taskForm button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    background: #4caf50;
+    color: white;
+    border-radius: 5px;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  .todo-input button:hover {
+    background: #00ac06;
+  }
+
+  /* To-Do List */
+  .todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    display: none;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+  }
+  
+  .todo-item label {
+    font-size: 1rem;
+    color: #555555;
+    cursor: pointer;
+  }
+  
+  .todo-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  .todo-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Checked styling for completed tasks */
+  .todo-item input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #aaaaaa;
+  }
+  

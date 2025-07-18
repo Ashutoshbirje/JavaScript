@@ -1,0 +1,52 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+#screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.div {
+  display: flex;
+  gap: 20px; /* space between buttons */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#start {
+  background-color: #28a745; /* green */
+  color: white;
+}
+
+#start:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+#stop {
+  background-color: #dc3545; /* red */
+  color: white;
+}
+
+#stop:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}

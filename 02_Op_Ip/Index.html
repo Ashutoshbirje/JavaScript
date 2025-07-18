@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js"></script>
+    <script>
+        // testing
+        // replace exesisting data of html on web page
+        function call1(){
+            document.getElementById("A1").innerHTML="Hello javascript";
+        }
+        // testing
+        // removes all exesisting data of html on web page
+        function call2(){
+            document.write("Hello javascript");
+        }
+        // alert
+        window.alert("Warning......!");
+        alert("Warning......!");
+        // debugging
+        console.log("OK");
+        // hard copy
+        function call3(){
+            window.print();
+        }
+    </script>
+</head>
+<body>
+    <p id="A1">Hello world</p>
+    <button type="button" onclick="call1()">Click here</button>
+    <p>Hello world</p>
+    <button type="button" onclick="call2()">Click here</button>
+    <p>Hello world</p>
+    <button type="button" onclick="call3()">Print</button>
+</body>
+</html>

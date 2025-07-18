@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button id="stop">STOP</button>
+    <script>
+        // Function definition 
+        const sayHi = function (){
+           console.log("HI");
+        }
+
+        const changetext = function(){
+           document.querySelector("h1").innerHTML = "How are you ?"
+        }
+
+        // Execution flow start from here 
+        console.log("Hello")
+
+        setTimeout(()=>{
+          console.log("Ashutosh")
+        },2000)
+
+        console.log("Hello")
+
+        setTimeout(sayHi,3000)
+        
+        const reffrence = setTimeout(changetext,2000)
+        
+        document.querySelector("#stop").addEventListener("click",() => {clearTimeout(reffrence); console.log("STOP TIMEOUT")});
+     
+        /// Task Queue 
+        /// hello << timeout(callback,2000) << hello << timeout(callback,3000) << timeout(callback,2000) << callback(2000) << callback(2000) << callback(3000)
+
+    </script>
+</body>
+</html>

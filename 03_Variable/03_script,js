@@ -1,0 +1,30 @@
+// Stack memory 
+
+// let a = "ashutosh"
+
+// let b = a ;
+
+// console.log(a);
+// console.log(b);
+
+// b = "birje"
+
+// console.log(a); // No change 
+// console.log(b); // change 
+
+// Heap memory
+
+let obj1 = {
+    fname: "ashu",
+    lname: "birje"
+}
+
+let obj2 = obj1
+
+console.log(obj1);
+console.log(obj2);
+
+obj2.fname = "ashutosh"
+
+console.log(obj1); // change 
+console.log(obj2); // change 

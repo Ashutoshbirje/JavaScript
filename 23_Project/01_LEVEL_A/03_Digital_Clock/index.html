@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital and Analog Clock</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f2027;
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .digital-clock {
+      font-size: 3em;
+      margin-bottom: 40px;
+      background: rgba(255,255,255,0.1);
+      padding: 20px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .analog-clock {
+      width: 250px;
+      height: 250px;
+      border: 8px solid white;
+      border-radius: 50%;
+      position: relative;
+      background: rgba(255,255,255,0.05);
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .hand {
+      position: absolute;
+      width: 50%;
+      height: 2px;
+      background: white;
+      top: 50%;
+      left: 50%;
+      transform-origin: 0%;
+      transform: rotate(90deg);
+      transition: all 0.05s ease-in-out;
+    }
+
+    .hand.hour {
+      height: 4px;
+      width: 30%;
+      background: #ffffff;
+    }
+
+    .hand.minute {
+      height: 3px;
+      width: 40%;
+      background: #a3d2ca;
+    }
+
+    .hand.second {
+      height: 2px;
+      width: 45%;
+      background: #f67280;
+    }
+
+    .center {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="digital-clock" id="digitalClock">00:00:00</div>
+
+  <div class="analog-clock">
+    <div class="hand hour" id="hourHand"></div>
+    <div class="hand minute" id="minuteHand"></div>
+    <div class="hand second" id="secondHand"></div>
+    <div class="center"></div>
+  </div>
+
+  <script>
+    function update(){
+      const now = new Date();
+      const hours = String((now.getHours() % 12)).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('digitalClock').textContent = `${hours}:${minutes}:${seconds}`;
+
+      const secondDeg = now.getSeconds() * 6;
+      const minuteDeg = now.getMinutes() * 6 + now.getSeconds() * 0.1;
+      const hourDeg = ((now.getHours() % 12) * 30) + (now.getMinutes() * 0.5);
+
+      document.getElementById('secondHand').style.transform = `rotate(${secondDeg}deg)`;
+      document.getElementById('minuteHand').style.transform = `rotate(${minuteDeg}deg)`;
+      document.getElementById('hourHand').style.transform = `rotate(${hourDeg}deg)`;
+    }
+
+    setInterval(update, 1000);
+    update();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+1. Beginner Projects (Core JS + DOM Basics)
+   (variables, functions, loops, conditionals, events, DOM, timing functions)
+
+# Color Flipper (Done)
+  - Click to change background color randomly on every second on start, stops on click..
+  - Covers: addEventListener, Math.random(), DOM manipulation, setInterval, clearInterval.
+ 
+# Counter App (Done)
+  - Increment, decrement, and reset a counter.
+  - Covers: basic event handling and state tracking.
+
+# Digital Clock / Analog Clock (Done)
+  - Live time with Date object.
+  - Covers: setInterval, time methods.
+
+# Simple Calculator (Done)
+  - Basic calculator with addition, subtraction, etc.
+  - Covers: event delegation, input handling, eval/parseFloat.
+
+# Typing Speed Test (Done)
+  - Test how fast you can type a given text.
+  - Covers: string comparison, timers, input events.
+
+# Todo List App (Done)
+  - Add/delete tasks, mark as done.
+  - Covers: DOM create/remove elements, local storage.
+
+# Guess the Number (Done)
+  - Random number guessing game.
+  - Covers: loops, conditionals, UI feedback.
+
+2. Intermediate Projects (ES6+ & API + Storage)
+   (ES6+ features, localStorage, modular code, async/await, fetch)
+
+# Weather App (Using OpenWeather API) (Done)
+  - Input city and get weather data.
+  - Covers: API calls, fetch, promises.
+
+# Dark Mode Toggle (with localStorage) (Done)
+  - Remember dark/light mode across refresh.
+  - Covers: localStorage, CSS classes toggle.
+
+# Create Dynamic calender 
+  - Create calender for every month 
+  - Covers: Dom, localstorage, Date object
+
+# Currency Converter
+  - Convert currency using exchange rate API.
+  - Covers: async/await, try/catch, dynamic DOM.
+
+# Quote Generator
+  - Get random quotes from API.
+  - Covers: API + DOM updates.
+
+# Form Validation
+  - Validate name, email, password with regex.
+  - Covers: form events, regex, custom error messages.
+
+# Quiz App
+  - Multiple-choice quiz with score.
+  - Covers: arrays, object manipulation, dynamic rendering.
+
+# Music Player
+  - Custom music player UI with play/pause/next.
+  - Covers: HTML5 <audio>, event handling, media APIs.
+
+# Stopwatch / Timer App
+  - Start, pause, reset time tracking.
+  - Covers: precise time control with intervals.
+
+3. Advanced Projects (OOP, Async, Patterns, SPA)
+   (classes, patterns, modules, APIs, error handling,SPA structure)
+
+# Expense Tracker
+  - Track and filter expenses with categories.
+  - Covers: localStorage, array methods (filter, reduce), modular JS.
+
+# Custom Modal / Toast Notification System
+  - Create reusable modals/toasts with timeout.
+  - Covers: reusable functions, animation, dynamic content.
+
+# Drawing App (Canvas API)
+  - Basic sketching app.
+  - Covers: Canvas API, mouse events, color selection.
+
+# Infinite Scroll Blog (using JSONPlaceholder)
+  - Load posts as user scrolls.
+  - Covers: IntersectionObserver, async data loading.
+
+# Authentication UI + Form (Mock API or Firebase)
+  - Sign up / login system.
+  - Covers: form + API + error handling + token storage.
+
+# Movie Search App (OMDb API)
+  - Search and display movies.
+  - Covers: search input, debounce, card-based UI.
+
+# Drag and Drop Kanban Board
+  - Trello-like board with tasks.
+  - Covers: Drag & Drop API, event coordination.
+
+# JavaScript Game (Snake / Tic Tac Toe / Memory Match)
+  - Logic-heavy game development.
+  - Covers: game loops, event control, AI (basic).
+
+
+4. Bonus: Framework-Level (Optional)
+
+# To-Do List in React (or Vue)
+  - Learn state management.
+
+# Mini Chat App using Socket.IO
+  - Real-time communication.
+
+# Portfolio Website with Project Showcase (Done)
+  - Combine all your projects, host with GitHub Pages or Netlify.

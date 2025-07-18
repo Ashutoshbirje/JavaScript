@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Card</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="card">
+        <img src="./Photo.jpeg" alt="Profile Picture" class="profile-image">
+        <h2 class="name">Ashutosh Birje</h2>
+        <p class="role">WCE</p>
+        <div class="buttons">
+            <button onclick="openModel()" class="btn">Share My Profile</button>
+            <button class="btn btn-primary">Follow Me</button>
+        </div>
+    </div>
+    <div class="share-profile-modal">
+        <div class="header">
+          <h2>Share My Profile</h2>
+          <button onclick="closeModel()" class="close-btn">&times;</button>
+        </div>
+        <hr>
+        <p class="subtext">Share this via</p>
+        <div class="social-icons">
+          <a href="#" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="icon telegram"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
