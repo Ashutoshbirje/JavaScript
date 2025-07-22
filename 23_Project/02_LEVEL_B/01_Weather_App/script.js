@@ -11,7 +11,7 @@ async function getdata() {
 
    // console.log(data);                
    // console.log(typeof data);     
-   
+
    document.querySelector("#time").textContent = data?.current.time.slice(11,16); 
    document.querySelector("#temp").textContent = data?.current.temperature_2m +" °C";
    document.querySelector("#wind").textContent = data?.current.wind_speed_10m +" km/h";

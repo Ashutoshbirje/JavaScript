@@ -1,6 +1,5 @@
 /////////////////////////:JavaScript://///////////////////////:
 
-https://javascript.info/
 
 About:
 
@@ -847,7 +846,6 @@ Remove Element / content
 .className                          // returns string
 .classList                          // returns array
 
-
 Event
 
 --> Event
@@ -1086,6 +1084,6 @@ Closures:
 
 Grabage Collector (auto)
 
-
 Source 
 https://www.w3schools.com/js/default.asp
+https://javascript.info/

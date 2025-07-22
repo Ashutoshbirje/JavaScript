@@ -41,19 +41,19 @@
   - Remember dark/light mode across refresh.
   - Covers: localStorage, CSS classes toggle.
 
-# Create Dynamic calender 
+# Create Dynamic calender (Done)
   - Create calender for every month 
   - Covers: Dom, localstorage, Date object
 
-# Currency Converter
+# Currency Converter 
   - Convert currency using exchange rate API.
   - Covers: async/await, try/catch, dynamic DOM.
 
-# Quote Generator
+# Quote Generator 
   - Get random quotes from API.
   - Covers: API + DOM updates.
 
-# Form Validation
+# Form Validation (Done)
   - Validate name, email, password with regex.
   - Covers: form events, regex, custom error messages.
 
